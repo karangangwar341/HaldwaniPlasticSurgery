@@ -1,0 +1,40 @@
+export const SITE_NAME = "Dr. Sarika Gangwar";
+export const SITE_TITLE =
+  "Dr. Sarika Gangwar | Best Plastic & Cosmetic Surgeon in Haldwani, Uttarakhand";
+export const SITE_DESCRIPTION =
+  "Dr. Sarika Gangwar is the leading plastic and cosmetic surgeon in Haldwani, Uttarakhand (Kumaun region). Expert in rhinoplasty, liposuction, breast surgery, hair transplant & more. Book your consultation today.";
+export const SITE_URL = "https://drsarikagangwar.com";
+
+export const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+export const WHATSAPP_MESSAGE = "Hi Doctor, I want consultation";
+export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+
+export const PHONE_NUMBER = "+91-XXXXXXXXXX";
+export const EMAIL = "info@drsarikagangwar.com";
+
+export const CLINIC_NAME = "Dr. Sarika Gangwar — Cosmetic & Plastic Surgery Clinic";
+export const CLINIC_ADDRESS = "Main Road, Haldwani, Nainital, Uttarakhand 263139";
+export const CLINIC_CITY = "Haldwani";
+export const CLINIC_STATE = "Uttarakhand";
+export const CLINIC_PINCODE = "263139";
+
+export const GOOGLE_MAPS_EMBED =
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55735.53506379997!2d79.48744784130407!3d29.221548242498756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09adddb27bcc1%3A0x81e41e2a5a02cfa5!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin";
+
+export const SERVICE_CATEGORIES = [
+  "Face",
+  "Breast",
+  "Body",
+  "Genitals",
+  "Hair & Skin",
+] as const;
+
+export type ServiceCategory = (typeof SERVICE_CATEGORIES)[number];
+
+export const NAV_LINKS = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Results", href: "/results" },
+  { label: "Contact", href: "/contact" },
+];

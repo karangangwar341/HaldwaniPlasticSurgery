@@ -168,6 +168,7 @@ export default function Navbar() {
 
           {[
             { label: "Results", href: "/results" },
+            { label: "Media", href: "/media" },
             { label: "Contact", href: "/contact" },
           ].map((link) => (
             <Link
@@ -281,6 +282,7 @@ export default function Navbar() {
 
             {[
               { label: "Results", href: "/results" },
+              { label: "Media", href: "/media" },
               { label: "Contact", href: "/contact" },
             ].map((link) => (
               <Link

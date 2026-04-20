@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: "https",
+        hostname: "image.pollinations.ai",
+        pathname: "/prompt/**",
+      },
+      {
+        protocol: "https",
         hostname: "cdn.sanity.io",
       },
     ],

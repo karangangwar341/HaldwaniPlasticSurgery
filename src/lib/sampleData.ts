@@ -1,4 +1,4 @@
-import { ServiceCategory } from "./constants";
+import { ServiceCategory, aiImage } from "./constants";
 
 /* ------------------------------------------------------------------ */
 /*  Types                                                              */
@@ -52,6 +52,104 @@ export interface DoctorInfo {
   image: string;
 }
 
+const clinicImages = {
+  doctor: aiImage(
+    "professional Indian female plastic surgeon portrait in a premium modern clinic, editorial medical photography",
+    600,
+    800
+  ),
+  face: aiImage(
+    "luxury cosmetic surgery face procedure patient portrait in a premium clinic, photorealistic medical marketing image"
+  ),
+  breast: aiImage(
+    "elegant cosmetic surgery breast procedure consultation in a premium clinic, photorealistic medical marketing image"
+  ),
+  body: aiImage(
+    "premium body contouring cosmetic surgery patient in a modern clinic, photorealistic medical marketing image"
+  ),
+  genitals: aiImage(
+    "discreet private cosmetic surgery consultation in a premium clinic, photorealistic medical marketing image"
+  ),
+  hairSkin: aiImage(
+    "hair transplant and skin rejuvenation consultation in a premium clinic, photorealistic medical marketing image"
+  ),
+  homeHero: aiImage(
+    "luxury cosmetic surgery clinic hero banner with elegant doctor and patient consultation, photorealistic"
+  ),
+  aboutHero: aiImage(
+    "confident female plastic surgeon portrait in a premium clinic, editorial medical photography"
+  ),
+  servicesHero: aiImage(
+    "modern cosmetic surgery clinic service showcase, elegant medical marketing image"
+  ),
+  resultsHero: aiImage(
+    "before and after cosmetic surgery transformation concept in a premium clinic, photorealistic"
+  ),
+  contactHero: aiImage(
+    "beautiful premium clinic reception and consultation room, photorealistic medical interior"
+  ),
+  resultRhinoplastyBefore: aiImage(
+    "before image of a rhinoplasty patient side profile in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultRhinoplastyAfter: aiImage(
+    "after image of a rhinoplasty patient side profile with a refined natural nose in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultGynecomastiaBefore: aiImage(
+    "before image for gynecomastia treatment showing a male torso in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultGynecomastiaAfter: aiImage(
+    "after image for gynecomastia treatment showing a flatter masculine chest contour in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultLiposuctionBefore: aiImage(
+    "before image for liposuction showing abdominal contour concerns in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultLiposuctionAfter: aiImage(
+    "after image for liposuction showing a smoother sculpted waistline in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultHairBefore: aiImage(
+    "before image for hair transplant showing visible thinning hair in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultHairAfter: aiImage(
+    "after image for hair transplant showing fuller natural hair growth in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultFaceBefore: aiImage(
+    "before image for face lift showing facial sagging in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultFaceAfter: aiImage(
+    "after image for face lift showing lifted youthful facial contours in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultTummyBefore: aiImage(
+    "before image for tummy tuck showing abdominal laxity in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+  resultTummyAfter: aiImage(
+    "after image for tummy tuck showing a flatter toned abdomen in clinical lighting, photorealistic",
+    600,
+    600
+  ),
+};
+
 /* ------------------------------------------------------------------ */
 /*  Doctor Info                                                        */
 /* ------------------------------------------------------------------ */
@@ -77,8 +175,7 @@ export const doctorInfo: DoctorInfo = {
   bio: "Dr. Sarika Gangwar is one of the most trusted plastic and cosmetic surgeons in Haldwani, Uttarakhand. With over 12 years of specialized experience and more than 3,500 successful procedures, she combines surgical precision with an artistic eye to deliver natural, life-changing results. Trained at premier medical institutions across India, Dr. Gangwar brings world-class cosmetic surgery expertise to the Kumaun region, making advanced aesthetic procedures accessible without the need to travel to metro cities.",
   philosophy:
     "Every patient is unique. My approach begins with truly understanding your goals and concerns, followed by an honest assessment of what can be achieved. I believe in enhancing your natural beauty — not changing who you are. Safety, precision, and natural-looking results are the cornerstones of my practice.",
-  image:
-    "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=600&q=80",
+  image: clinicImages.doctor,
 };
 
 /* ------------------------------------------------------------------ */
@@ -127,7 +224,7 @@ export const services: Service[] = [
       { question: "What is the ideal age for a face lift?", answer: "Most patients are between 40 and 70, but candidacy depends on skin quality and facial aging rather than age alone." },
       { question: "Can a face lift be combined with other procedures?", answer: "Yes. It is commonly combined with eyelid surgery (blepharoplasty), brow lift, or fat grafting for comprehensive facial rejuvenation." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1523263685509-7085e1d52c68?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Face Lift Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Get a natural-looking face lift in Haldwani, Uttarakhand with Dr. Sarika Gangwar. Advanced rhytidectomy techniques for lasting facial rejuvenation. Book consultation.",
     relatedServices: ["brow-lift", "blepharoplasty", "rhinoplasty"],
@@ -168,7 +265,7 @@ export const services: Service[] = [
       { question: "Will I have visible scars?", answer: "Incisions are hidden behind the hairline and become virtually invisible once healed." },
       { question: "Can it be combined with eyelid surgery?", answer: "Yes. A brow lift pairs beautifully with blepharoplasty for complete upper-face rejuvenation." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Brow Lift Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert brow lift surgery in Haldwani, Uttarakhand. Endoscopic forehead lift by Dr. Sarika Gangwar for a refreshed, youthful look.",
     relatedServices: ["face-lift", "blepharoplasty", "rhinoplasty"],
@@ -209,7 +306,7 @@ export const services: Service[] = [
       { question: "Can I get upper and lower lids done together?", answer: "Yes. Many patients opt for a combined procedure for comprehensive rejuvenation." },
       { question: "At what age is blepharoplasty recommended?", answer: "While most common in patients 35+, it depends on individual anatomy. Some patients seek it earlier for genetic under-eye bags." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Blepharoplasty (Eyelid Surgery) in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert eyelid surgery in Haldwani, Uttarakhand. Remove baggy eyelids and under-eye bags. Consult Dr. Sarika Gangwar for blepharoplasty.",
     relatedServices: ["face-lift", "brow-lift", "lip-enhancement-reduction"],
@@ -252,7 +349,7 @@ export const services: Service[] = [
       { question: "How long until I see the final result?", answer: "While major changes are visible at 4–6 weeks, the final result with all subtle refinements is typically seen at 12 months." },
       { question: "Is rhinoplasty painful?", answer: "Most patients report mild discomfort rather than pain. Congestion is the primary sensation during the first week." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Rhinoplasty (Nose Job) in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Best rhinoplasty surgeon in Haldwani, Uttarakhand. Expert nose reshaping by Dr. Sarika Gangwar. Cosmetic + functional nose surgery. Book now.",
     relatedServices: ["face-lift", "chin-correction", "lip-enhancement-reduction"],
@@ -290,7 +387,7 @@ export const services: Service[] = [
       { question: "Is lip enhancement permanent?", answer: "Fat grafting provides long-lasting results. Some volume may settle in the first few months, so slight overcorrection is planned." },
       { question: "How noticeable are scars?", answer: "Incisions are hidden within the lip border and become virtually invisible once healed." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Lip Enhancement & Reduction in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert lip enhancement and lip reduction surgery in Haldwani. Natural-looking lip procedures by Dr. Sarika Gangwar. Consultation available.",
     relatedServices: ["rhinoplasty", "chin-correction", "face-lift"],
@@ -328,7 +425,7 @@ export const services: Service[] = [
       { question: "Implant or bone surgery — which is better?", answer: "It depends on your anatomy. Sliding genioplasty offers more options for repositioning, while implants are simpler for augmentation-only cases." },
       { question: "Are chin implants safe?", answer: "Yes. Modern biocompatible implants are well-tolerated and have a long safety record." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Chin Correction Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert chin correction and genioplasty in Haldwani, Uttarakhand. Improve your facial profile with Dr. Sarika Gangwar.",
     relatedServices: ["rhinoplasty", "face-lift", "lip-enhancement-reduction"],
@@ -366,7 +463,7 @@ export const services: Service[] = [
       { question: "At what age can children have otoplasty?", answer: "Children as young as 5 years old can have otoplasty, as ear cartilage is sufficiently developed by this age." },
       { question: "Will otoplasty leave visible scars?", answer: "No. Incisions are made behind the ear and become virtually invisible." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1551884170-09fb70a3a2ed?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.face,
     seoTitle: "Ear Reshaping (Otoplasty) in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert otoplasty in Haldwani, Uttarakhand. Correct prominent or misshapen ears with Dr. Sarika Gangwar.",
     relatedServices: ["rhinoplasty", "face-lift", "chin-correction"],
@@ -409,7 +506,7 @@ export const services: Service[] = [
       { question: "Can I breastfeed after augmentation?", answer: "In most cases, yes. Implant placement technique is chosen to preserve breast tissue and milk ducts." },
       { question: "How long do implants last?", answer: "Modern implants can last 15–20+ years. They are not considered lifetime devices and may eventually need replacement." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.breast,
     seoTitle: "Breast Augmentation in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert breast augmentation surgery in Haldwani, Uttarakhand. Natural-looking breast implants by Dr. Sarika Gangwar. Book consultation today.",
     relatedServices: ["breast-reduction", "breast-lift-mastopexy", "gynecomastia"],
@@ -450,7 +547,7 @@ export const services: Service[] = [
       { question: "Can I breastfeed after reduction?", answer: "There is a possibility of reduced breastfeeding ability. This is discussed in detail during consultation." },
       { question: "Will insurance cover breast reduction?", answer: "When performed for medical reasons with documented symptoms, breast reduction may be covered. We can provide necessary documentation." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.breast,
     seoTitle: "Breast Reduction Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert breast reduction in Haldwani, Uttarakhand. Relief from back pain with proportionate results. Consult Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-lift-mastopexy", "liposuction"],
@@ -491,7 +588,7 @@ export const services: Service[] = [
       { question: "Will a breast lift leave scars?", answer: "Scars are placed around the areola and in the natural breast fold. They fade significantly over 12–18 months." },
       { question: "How long do results last?", answer: "Results are long-lasting, especially with stable weight. Gravity will continue its natural effect over years." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.breast,
     seoTitle: "Breast Lift (Mastopexy) in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Best breast lift surgery in Haldwani, Uttarakhand. Correct sagging breasts with mastopexy by Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-reduction", "tummy-tuck"],
@@ -532,7 +629,7 @@ export const services: Service[] = [
       { question: "Is gynecomastia surgery painful?", answer: "Most patients report mild to moderate discomfort for the first few days, well-managed with medication." },
       { question: "Will there be visible scars?", answer: "Scars from liposuction are tiny (3–4mm). The periareolar scar blends with the areola border and becomes barely visible." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.breast,
     seoTitle: "Gynecomastia Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Best gynecomastia surgery in Haldwani, Uttarakhand. Male breast reduction by Dr. Sarika Gangwar. Flat, masculine chest. Book consultation.",
     relatedServices: ["liposuction", "breast-reduction", "abdominal-etching"],
@@ -569,7 +666,7 @@ export const services: Service[] = [
       { question: "Can I breastfeed after nipple correction?", answer: "Breastfeeding ability depends on the technique used. Milk duct preservation is prioritized when future breastfeeding is desired." },
       { question: "Is this done under general anesthesia?", answer: "No. It is typically performed under local anesthesia as an outpatient procedure." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.breast,
     seoTitle: "Nipple & Areola Correction in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert nipple and areola correction in Haldwani, Uttarakhand. Fix inverted nipples and areola concerns with Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-lift-mastopexy", "breast-reduction"],
@@ -614,7 +711,7 @@ export const services: Service[] = [
       { question: "How many areas can be treated at once?", answer: "Multiple areas can be treated in a single session, depending on the total volume and patient safety considerations." },
       { question: "What areas can be treated?", answer: "Common areas include abdomen, flanks (love handles), thighs, arms, chin, back, and male chest." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.body,
     seoTitle: "Liposuction in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Best liposuction surgery in Haldwani, Uttarakhand. Advanced body contouring by Dr. Sarika Gangwar. Remove stubborn fat. Book now.",
     relatedServices: ["tummy-tuck", "body-lift", "abdominal-etching"],
@@ -656,7 +753,7 @@ export const services: Service[] = [
       { question: "Should I lose weight before a tummy tuck?", answer: "Ideally, reach a stable weight close to your goal. A tummy tuck is not a weight-loss procedure." },
       { question: "Full or mini tummy tuck — which do I need?", answer: "A mini tummy tuck addresses the area below the navel only. A full tummy tuck addresses the entire abdomen. Dr. Gangwar will recommend based on your anatomy." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.body,
     seoTitle: "Tummy Tuck (Abdominoplasty) in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert tummy tuck surgery in Haldwani, Uttarakhand. Flat, toned abdomen by Dr. Sarika Gangwar. Book consultation.",
     relatedServices: ["liposuction", "mommy-makeover", "body-lift"],
@@ -698,7 +795,7 @@ export const services: Service[] = [
       { question: "When should I have a mommy makeover?", answer: "Wait until you've completed your family, finished breastfeeding for at least 3 months, and reached a stable weight." },
       { question: "Is one recovery easier than separate recoveries?", answer: "Yes. While initial recovery may be more involved, total downtime is significantly less than having procedures separately." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.body,
     seoTitle: "Mommy Makeover in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Comprehensive mommy makeover in Haldwani, Uttarakhand. Restore your body after pregnancy. Dr. Sarika Gangwar. Book consultation.",
     relatedServices: ["tummy-tuck", "breast-lift-mastopexy", "liposuction"],
@@ -740,7 +837,7 @@ export const services: Service[] = [
       { question: "Will there be significant scars?", answer: "Scars are extensive but placed strategically along the bikini line and natural body contours. They fade significantly over time." },
       { question: "How long is the surgery?", answer: "A body lift typically takes 4–6 hours depending on the areas treated." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.body,
     seoTitle: "Body Lift Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert body lift after weight loss in Haldwani, Uttarakhand. Remove excess skin with Dr. Sarika Gangwar. Transform your body.",
     relatedServices: ["tummy-tuck", "liposuction", "mommy-makeover"],
@@ -780,7 +877,7 @@ export const services: Service[] = [
       { question: "Do I need to be fit for abdominal etching?", answer: "Yes. Best results are achieved in patients who are already fit with some muscle development. This is a sculpting procedure, not weight loss." },
       { question: "Will the abs look natural?", answer: "Absolutely. The sculpting follows your actual muscle anatomy, so results look completely natural — like you achieved them through training." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.body,
     seoTitle: "Abdominal Etching in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Six-pack sculpting with abdominal etching in Haldwani. HD liposuction by Dr. Sarika Gangwar for athletic body contours.",
     relatedServices: ["liposuction", "tummy-tuck", "gynecomastia"],
@@ -820,7 +917,7 @@ export const services: Service[] = [
       { question: "Is the procedure confidential?", answer: "Absolutely. Patient privacy is our highest priority. All consultations and procedures are conducted with complete confidentiality." },
       { question: "When can I return to normal activities?", answer: "Light activities can resume in 2 weeks. Full activities including intimacy after 6–8 weeks." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.genitals,
     seoTitle: "Vaginal Tightening in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Confidential vaginal tightening surgery in Haldwani, Uttarakhand. Expert vaginoplasty by Dr. Sarika Gangwar.",
     relatedServices: ["hymenoplasty", "mommy-makeover", "tummy-tuck"],
@@ -858,7 +955,7 @@ export const services: Service[] = [
       { question: "Is this procedure confidential?", answer: "Yes. Complete confidentiality is guaranteed. No information is shared without your explicit consent." },
       { question: "Is it painful?", answer: "Local anesthesia ensures the procedure is comfortable. Mild discomfort after surgery is managed with medication." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.genitals,
     seoTitle: "Hymenoplasty in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Confidential hymenoplasty in Haldwani, Uttarakhand. Expert hymen restoration by Dr. Sarika Gangwar.",
     relatedServices: ["vaginal-tightening", "mommy-makeover"],
@@ -896,7 +993,7 @@ export const services: Service[] = [
       { question: "Are these procedures safe?", answer: "Yes. All procedures follow established surgical protocols with proven safety records." },
       { question: "Is confidentiality guaranteed?", answer: "Absolutely. Patient privacy is our highest priority." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.genitals,
     seoTitle: "Male Genital Procedures in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Confidential male genital surgery in Haldwani, Uttarakhand by Dr. Sarika Gangwar. Expert care and precision.",
     relatedServices: ["gynecomastia", "liposuction"],
@@ -936,7 +1033,7 @@ export const services: Service[] = [
       { question: "What are the requirements for surgery?", answer: "Requirements include documented gender dysphoria, mental health evaluation, and hormone therapy duration as per WPATH standards." },
       { question: "How long is the recovery?", answer: "Full recovery takes 6–12 months with gradual return to activities over this period." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.genitals,
     seoTitle: "Sex Reassignment Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Compassionate gender-affirming surgery in Haldwani, Uttarakhand. Expert care by Dr. Sarika Gangwar.",
     relatedServices: ["male-genital-procedures", "breast-augmentation"],
@@ -981,7 +1078,7 @@ export const services: Service[] = [
       { question: "When will I see results?", answer: "New growth starts at 3–4 months, with full results visible at 8–12 months. Patience is key — the wait is worth it." },
       { question: "How many grafts will I need?", answer: "This depends on the area of hair loss and desired density. Typically 1,500–4,000 grafts per session." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1585747860019-5004e8e8b4a4?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.hairSkin,
     seoTitle: "Hair Transplant in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Best hair transplant in Haldwani, Uttarakhand. FUE & FUT techniques by Dr. Sarika Gangwar. Natural results. Book consultation.",
     relatedServices: ["scar-removal", "vitiligo-surgery", "mole-wart-removal"],
@@ -1020,7 +1117,7 @@ export const services: Service[] = [
       { question: "Can scars be completely removed?", answer: "While scars cannot be made completely invisible, expert revision can make them dramatically less noticeable — often blending seamlessly with surrounding skin." },
       { question: "What types of scars can be treated?", answer: "All types — keloids, hypertrophic scars, atrophic (acne) scars, burn scars, and surgical scars." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.hairSkin,
     seoTitle: "Scar Removal Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Expert scar removal and revision in Haldwani, Uttarakhand. Keloid, acne scar, burn scar treatment by Dr. Sarika Gangwar.",
     relatedServices: ["vitiligo-surgery", "mole-wart-removal", "hair-transplant"],
@@ -1060,7 +1157,7 @@ export const services: Service[] = [
       { question: "What is the success rate?", answer: "Surgical vitiligo treatment has a 70–90% success rate in properly selected patients with stable disease." },
       { question: "Will the vitiligo come back after surgery?", answer: "In stable vitiligo, recurrence in treated areas is uncommon. However, new patches may develop elsewhere." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.hairSkin,
     seoTitle: "Vitiligo Surgery in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Advanced vitiligo surgery in Haldwani, Uttarakhand. Melanocyte transplant for repigmentation by Dr. Sarika Gangwar.",
     relatedServices: ["scar-removal", "mole-wart-removal", "hair-transplant"],
@@ -1097,7 +1194,7 @@ export const services: Service[] = [
       { question: "Will mole removal leave a scar?", answer: "Some scarring is expected but is minimized with proper technique. Scars are typically much less noticeable than the original mole." },
       { question: "Can moles grow back after removal?", answer: "Properly excised moles rarely recur. Any recurrence should be re-evaluated." },
     ],
-    heroImage: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=1920&q=80",
+    heroImage: clinicImages.hairSkin,
     seoTitle: "Mole & Wart Removal in Haldwani | Dr. Sarika Gangwar",
     seoDescription: "Safe mole and wart removal in Haldwani, Uttarakhand. Expert skin lesion treatment by Dr. Sarika Gangwar.",
     relatedServices: ["scar-removal", "vitiligo-surgery", "hair-transplant"],
@@ -1154,8 +1251,8 @@ export const testimonials: Testimonial[] = [
 export const results: ResultItem[] = [
   {
     id: "result-1",
-    beforeImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultRhinoplastyBefore,
+    afterImage: clinicImages.resultRhinoplastyAfter,
     caption: "Rhinoplasty — Natural nose reshaping for improved facial harmony",
     serviceSlug: "rhinoplasty",
     serviceTitle: "Rhinoplasty",
@@ -1163,8 +1260,8 @@ export const results: ResultItem[] = [
   },
   {
     id: "result-2",
-    beforeImage: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultGynecomastiaBefore,
+    afterImage: clinicImages.resultGynecomastiaAfter,
     caption: "Gynecomastia — Flat, masculine chest contour achieved",
     serviceSlug: "gynecomastia",
     serviceTitle: "Gynecomastia",
@@ -1172,8 +1269,8 @@ export const results: ResultItem[] = [
   },
   {
     id: "result-3",
-    beforeImage: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultLiposuctionBefore,
+    afterImage: clinicImages.resultLiposuctionAfter,
     caption: "Liposuction — Sculpted body contours with permanent fat removal",
     serviceSlug: "liposuction",
     serviceTitle: "Liposuction",
@@ -1181,8 +1278,8 @@ export const results: ResultItem[] = [
   },
   {
     id: "result-4",
-    beforeImage: "https://images.unsplash.com/photo-1585747860019-5004e8e8b4a4?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultHairBefore,
+    afterImage: clinicImages.resultHairAfter,
     caption: "Hair Transplant — Dense, natural hair growth restored",
     serviceSlug: "hair-transplant",
     serviceTitle: "Hair Transplant",
@@ -1190,8 +1287,8 @@ export const results: ResultItem[] = [
   },
   {
     id: "result-5",
-    beforeImage: "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1523263685509-7085e1d52c68?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultFaceBefore,
+    afterImage: clinicImages.resultFaceAfter,
     caption: "Face Lift — Youthful facial contours restored naturally",
     serviceSlug: "face-lift",
     serviceTitle: "Face Lift",
@@ -1199,8 +1296,8 @@ export const results: ResultItem[] = [
   },
   {
     id: "result-6",
-    beforeImage: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=600&q=80",
-    afterImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80",
+    beforeImage: clinicImages.resultTummyBefore,
+    afterImage: clinicImages.resultTummyAfter,
     caption: "Tummy Tuck — Flat, toned abdomen after pregnancy",
     serviceSlug: "tummy-tuck",
     serviceTitle: "Tummy Tuck",

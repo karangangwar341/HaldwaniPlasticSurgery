@@ -5,11 +5,19 @@ export const SITE_DESCRIPTION =
   "Dr. Sarika Gangwar is the leading plastic and cosmetic surgeon in Haldwani, Uttarakhand (Kumaun region). Expert in rhinoplasty, liposuction, breast surgery, hair transplant & more. Book your consultation today.";
 export const SITE_URL = "https://drsarikagangwar.com";
 
-export const WHATSAPP_NUMBER = "91XXXXXXXXXX";
+export function aiImage(prompt: string, width = 1920, height = 1280) {
+  const seed = prompt
+    .split("")
+    .reduce((value, character) => (value * 31 + character.charCodeAt(0)) >>> 0, 0);
+
+  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${width}&height=${height}&nologo=true&model=flux&seed=${seed}`;
+}
+
+export const WHATSAPP_NUMBER = "918279962736";
 export const WHATSAPP_MESSAGE = "Hi Doctor, I want consultation";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
-export const PHONE_NUMBER = "+91-XXXXXXXXXX";
+export const PHONE_NUMBER = "+91-8279962736";
 export const EMAIL = "info@drsarikagangwar.com";
 
 export const CLINIC_NAME = "Dr. Sarika Gangwar — Cosmetic & Plastic Surgery Clinic";

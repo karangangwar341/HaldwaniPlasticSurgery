@@ -6,9 +6,8 @@ import ServiceCard from "@/components/ServiceCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
 import { MedicalBusinessSchema, PhysicianSchema, FAQPageSchema } from "@/components/SchemaMarkup";
-import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK } from "@/lib/constants";
+import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK, SERVICE_CATEGORIES, aiImage } from "@/lib/constants";
 import { doctorInfo, services, testimonials, results } from "@/lib/sampleData";
-import { SERVICE_CATEGORIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -54,7 +53,7 @@ export default function Home() {
       <HeroSection
         title="Best Plastic Surgeon in Haldwani, Uttarakhand"
         subtitle="Advanced cosmetic & plastic surgery with natural results. 12+ years of experience, 3,500+ successful procedures. Trusted by patients across the Kumaun region."
-        backgroundImage="https://images.unsplash.com/photo-1551190822-a9ce113ac100?auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={aiImage("luxury cosmetic surgery clinic hero banner with elegant doctor and patient consultation, photorealistic")}
         ctaText="View Services"
         ctaLink="/services"
       />
@@ -131,7 +130,7 @@ export default function Home() {
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             {/* Image */}
             <div className="relative">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-2xl">
+              <div className="relative aspect-3/4 overflow-hidden rounded-2xl shadow-2xl">
                 <Image
                   src={doctorInfo.image}
                   alt={doctorInfo.name}

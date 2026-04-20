@@ -7,6 +7,7 @@ import {
   CLINIC_NAME,
   CLINIC_ADDRESS,
   GOOGLE_MAPS_EMBED,
+  aiImage,
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -21,7 +22,7 @@ export default function ContactPage() {
       <HeroSection
         title="Get in Touch"
         subtitle="Take the first step toward your transformation. We are here to answer your questions and schedule your consultation."
-        backgroundImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1920&q=80"
+        backgroundImage={aiImage("beautiful premium clinic reception and consultation room, photorealistic medical interior")}
         height="medium"
       />
 

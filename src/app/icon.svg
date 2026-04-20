@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Navy background circle -->
+  <circle cx="32" cy="32" r="32" fill="#1B2A4A"/>
+
+  <!-- Scalpel blade (handle pointing bottom-right, blade top-left) -->
+  <g transform="rotate(-45 32 32)">
+    <!-- Handle -->
+    <rect x="30" y="34" width="6" height="16" rx="3" fill="#C9A96E"/>
+    <!-- Blade body -->
+    <rect x="30" y="14" width="6" height="22" rx="1" fill="#FAF7F2"/>
+    <!-- Blade tip (sharp point) -->
+    <polygon points="30,14 36,14 33,7" fill="#FAF7F2"/>
+    <!-- Blade groove -->
+    <rect x="31.5" y="16" width="1.5" height="16" rx="0.75" fill="#C9A96E" opacity="0.6"/>
+  </g>
+
+  <!-- Sparkle top-left -->
+  <g transform="translate(13,13)" fill="#C9A96E">
+    <polygon points="4,0 5,3 8,4 5,5 4,8 3,5 0,4 3,3" />
+  </g>
+
+  <!-- Sparkle bottom-right -->
+  <g transform="translate(43,43)" fill="#C9A96E" opacity="0.7">
+    <polygon points="3,0 3.75,2.25 6,3 3.75,3.75 3,6 2.25,3.75 0,3 2.25,2.25" />
+  </g>
+</svg>

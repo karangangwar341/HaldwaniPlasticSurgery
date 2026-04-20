@@ -6,7 +6,7 @@ import ServiceCard from "@/components/ServiceCard";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
 import { MedicalBusinessSchema, PhysicianSchema, FAQPageSchema } from "@/components/SchemaMarkup";
-import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK, SERVICE_CATEGORIES, aiImage } from "@/lib/constants";
+import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK, SERVICE_CATEGORIES } from "@/lib/constants";
 import { doctorInfo, services, testimonials, results } from "@/lib/sampleData";
 
 export const metadata: Metadata = {
@@ -53,7 +53,7 @@ export default function Home() {
       <HeroSection
         title="Best Plastic Surgeon in Haldwani, Uttarakhand"
         subtitle="Advanced cosmetic & plastic surgery with natural results. 12+ years of experience, 3,500+ successful procedures. Trusted by patients across the Kumaun region."
-        backgroundImage={aiImage("luxury cosmetic surgery clinic hero banner with elegant doctor and patient consultation, photorealistic")}
+        backgroundImage="/images/hero-home.jpg"
         ctaText="View Services"
         ctaLink="/services"
       />

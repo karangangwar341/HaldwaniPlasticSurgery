@@ -5,26 +5,37 @@ export const SITE_DESCRIPTION =
   "Dr. Sarika Gangwar is the leading plastic and cosmetic surgeon in Haldwani, Uttarakhand (Kumaun region). Expert in rhinoplasty, liposuction, breast surgery, hair transplant & more. Book your consultation today.";
 export const SITE_URL = "https://drsarikagangwar.com";
 
-export function aiImage(prompt: string, width = 1920, height = 1280) {
-  const seed = prompt
-    .split("")
-    .reduce((value, character) => (value * 31 + character.charCodeAt(0)) >>> 0, 0);
-
-  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?width=${width}&height=${height}&nologo=true&model=flux&seed=${seed}`;
-}
-
 export const WHATSAPP_NUMBER = "918279962736";
 export const WHATSAPP_MESSAGE = "Hi Doctor, I want consultation";
 export const WHATSAPP_LINK = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
 export const PHONE_NUMBER = "+91-8279962736";
-export const EMAIL = "info@drsarikagangwar.com";
+export const EMAIL = "haldwaniplasticsurgery@gmail.com";
+export const INSTAGRAM_LINK = "https://www.instagram.com/drsarikaplasticsurgeryarts";
+export const FACEBOOK_LINK = "https://www.facebook.com/drsarikagangwar";
 
 export const CLINIC_NAME = "Dr. Sarika Gangwar — Cosmetic & Plastic Surgery Clinic";
-export const CLINIC_ADDRESS = "Main Road, Haldwani, Nainital, Uttarakhand 263139";
+export const CLINIC_ADDRESS = "Haldwani, Nainital, Uttarakhand 263139";
 export const CLINIC_CITY = "Haldwani";
 export const CLINIC_STATE = "Uttarakhand";
 export const CLINIC_PINCODE = "263139";
+
+export const CLINIC_LOCATIONS = [
+  {
+    name: "Chandan Hospital",
+    role: "Chairperson, Plastic Surgery Department",
+    address: "Chandan Hospital, Haldwani, Uttarakhand",
+    hours: "9:00 AM – 5:00 PM",
+    days: "Monday – Saturday",
+  },
+  {
+    name: "Healthscapes Clinic",
+    role: "Cosmetic & Aesthetic Surgery",
+    address: "Healthscapes, Haldwani, Uttarakhand",
+    hours: "5:00 PM – 7:00 PM",
+    days: "Monday – Saturday",
+  },
+];
 
 export const GOOGLE_MAPS_EMBED =
   "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55735.53506379997!2d79.48744784130407!3d29.221548242498756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09adddb27bcc1%3A0x81e41e2a5a02cfa5!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin";

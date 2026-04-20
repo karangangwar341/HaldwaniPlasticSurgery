@@ -5,7 +5,7 @@ import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import { PhysicianSchema } from "@/components/SchemaMarkup";
 import { doctorInfo } from "@/lib/sampleData";
-import { WHATSAPP_LINK, aiImage } from "@/lib/constants";
+import { WHATSAPP_LINK } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
@@ -21,7 +21,7 @@ export default function AboutPage() {
       <HeroSection
         title="About Dr. Sarika Gangwar"
         subtitle="A surgeon's skill. An artist's eye. Trusted by thousands."
-        backgroundImage={aiImage("confident female plastic surgeon portrait in a premium clinic, editorial medical photography")}
+        backgroundImage="/images/hero-about.jpg"
         height="medium"
       />
 

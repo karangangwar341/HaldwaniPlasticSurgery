@@ -4,7 +4,7 @@ import ServiceCard from "@/components/ServiceCard";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import { services } from "@/lib/sampleData";
-import { SERVICE_CATEGORIES, aiImage } from "@/lib/constants";
+import { SERVICE_CATEGORIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "All Cosmetic Surgery Services | Dr. Sarika Gangwar — Haldwani",
@@ -18,7 +18,7 @@ export default function ServicesPage() {
       <HeroSection
         title="Our Services"
         subtitle="Comprehensive cosmetic and plastic surgery services tailored to your goals. Each procedure is performed with precision, safety, and an artistic eye."
-        backgroundImage={aiImage("modern cosmetic surgery clinic service showcase, elegant medical marketing image")}
+        backgroundImage="/images/hero-services.jpg"
         height="medium"
         ctaText="Book Consultation"
         ctaLink="/contact"

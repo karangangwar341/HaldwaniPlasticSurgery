@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
 import { results } from "@/lib/sampleData";
-import { aiImage } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Before & After Results | Dr. Sarika Gangwar — Haldwani",
@@ -19,7 +18,7 @@ export default function ResultsPage() {
       <HeroSection
         title="Real Results"
         subtitle="See the life-changing transformations achieved by our patients. Every result reflects our commitment to natural beauty and surgical excellence."
-        backgroundImage={aiImage("before and after cosmetic surgery transformation concept in a premium clinic, photorealistic")}
+        backgroundImage="/images/hero-results.jpg"
         height="medium"
       />
 

@@ -1,8 +1,6 @@
-/**
- * Sanity CMS Schema — Testimonial
- */
+import { defineType, defineField } from "sanity";
 
-const testimonial = {
+const testimonial = defineType({
   name: "testimonial",
   title: "Testimonial",
   type: "document",
@@ -11,21 +9,20 @@ const testimonial = {
       name: "name",
       title: "Patient Name",
       type: "string",
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "text",
       title: "Testimonial Text",
       type: "text",
       rows: 4,
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "rating",
       title: "Rating (1–5)",
       type: "number",
-      validation: (Rule: { min: (n: number) => { max: (n: number) => unknown } }) =>
-        Rule.min(1).max(5),
+      validation: (Rule) => Rule.min(1).max(5),
     },
     {
       name: "procedure",
@@ -36,6 +33,6 @@ const testimonial = {
   preview: {
     select: { title: "name", subtitle: "procedure" },
   },
-};
+});
 
 export default testimonial;

@@ -1,11 +1,6 @@
-/**
- * Sanity CMS Schema — Service
- *
- * Install `sanity` and configure your studio to use this schema.
- * import { defineField, defineType } from "sanity";
- */
+import { defineType, defineField } from "sanity";
 
-const service = {
+const service = defineType({
   name: "service",
   title: "Service",
   type: "document",
@@ -14,14 +9,14 @@ const service = {
       name: "title",
       title: "Title",
       type: "string",
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "slug",
       title: "Slug",
       type: "slug",
       options: { source: "title", maxLength: 96 },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "category",
@@ -36,7 +31,7 @@ const service = {
           { title: "Hair & Skin", value: "Hair & Skin" },
         ],
       },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "shortDescription",
@@ -150,6 +145,6 @@ const service = {
   preview: {
     select: { title: "title", subtitle: "category", media: "mainImage" },
   },
-};
+});
 
 export default service;

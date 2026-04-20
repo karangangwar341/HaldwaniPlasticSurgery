@@ -1,8 +1,6 @@
-/**
- * Sanity CMS Schema — Result (Before / After)
- */
+import { defineType, defineField } from "sanity";
 
-const result = {
+const result = defineType({
   name: "result",
   title: "Result (Before/After)",
   type: "document",
@@ -12,14 +10,14 @@ const result = {
       title: "Before Image",
       type: "image",
       options: { hotspot: true },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "afterImage",
       title: "After Image",
       type: "image",
       options: { hotspot: true },
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "caption",
@@ -31,7 +29,7 @@ const result = {
       title: "Service",
       type: "reference",
       to: [{ type: "service" }],
-      validation: (Rule: { required: () => unknown }) => Rule.required(),
+      validation: (Rule) => Rule.required(),
     },
     {
       name: "locationTag",
@@ -43,6 +41,6 @@ const result = {
   preview: {
     select: { title: "caption", media: "afterImage" },
   },
-};
+});
 
 export default result;

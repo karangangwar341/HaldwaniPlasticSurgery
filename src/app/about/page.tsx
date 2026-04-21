@@ -10,7 +10,7 @@ import { WHATSAPP_LINK } from "@/lib/constants";
 export const metadata: Metadata = {
   title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
   description:
-    "Learn about Dr. Sarika Gangwar — leading plastic and cosmetic surgeon in Haldwani, Uttarakhand. 12+ years experience, MCh Plastic Surgery, 3,500+ procedures.",
+    "Learn about Dr. Sarika Gangwar — leading plastic and cosmetic surgeon in Haldwani, Uttarakhand. 8+ years experience, DrNB Plastic Surgery, 1,200+ procedures.",
 };
 
 export default function AboutPage() {

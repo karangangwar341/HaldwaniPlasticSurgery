@@ -31,14 +31,14 @@ export const CLINIC_LOCATIONS = [
   {
     name: "Healthscapes Clinic",
     role: "Cosmetic & Aesthetic Surgery",
-    address: "Healthscapes, Haldwani, Uttarakhand",
+    address: "Healthscapes, Main Market, Piilikothi Chaurha, Near Nainital Bank,Haldwani, Uttarakhand",
     hours: "5:00 PM – 7:00 PM",
     days: "Monday – Saturday",
   },
 ];
 
 export const GOOGLE_MAPS_EMBED =
-  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55735.53506379997!2d79.48744784130407!3d29.221548242498756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09adddb27bcc1%3A0x81e41e2a5a02cfa5!2sHaldwani%2C%20Uttarakhand!5e0!3m2!1sen!2sin";
+  "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13926.764937855569!2d79.52002874103519!3d29.232635282540606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39a09b005b79c201%3A0x7961a16189c46cdb!2sChandan%20Hospital!5e0!3m2!1sen!2sin!4v1776766769256!5m2!1sen!2sin";
 
 export const SERVICE_CATEGORIES = [
   "Face",

@@ -1,4 +1,4 @@
-import { SITE_URL, CLINIC_NAME, CLINIC_ADDRESS, CLINIC_CITY, CLINIC_STATE, CLINIC_PINCODE, PHONE_NUMBER, EMAIL } from "@/lib/constants";
+import { SITE_URL, CLINIC_NAME, CLINIC_CITY, CLINIC_STATE, CLINIC_PINCODE, PHONE_NUMBER, EMAIL, CLINIC_LOCATIONS } from "@/lib/constants";
 import { doctorInfo } from "@/lib/sampleData";
 
 /* ------------------------------------------------------------------ */
@@ -15,7 +15,7 @@ export function MedicalBusinessSchema() {
     email: EMAIL,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Main Road, Haldwani",
+      streetAddress: CLINIC_LOCATIONS[0].address,
       addressLocality: CLINIC_CITY,
       addressRegion: CLINIC_STATE,
       postalCode: CLINIC_PINCODE,
@@ -29,8 +29,16 @@ export function MedicalBusinessSchema() {
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",
+        name: CLINIC_LOCATIONS[0].name,
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "10:00",
+        opens: "09:00",
+        closes: "17:00",
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        name: CLINIC_LOCATIONS[1].name,
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "17:00",
         closes: "19:00",
       },
     ],

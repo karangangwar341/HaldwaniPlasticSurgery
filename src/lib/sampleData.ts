@@ -96,7 +96,7 @@ export const doctorInfo: DoctorInfo = {
   ],
   experience: 8,
   proceduresDone: 1200,
-  bio: "Dr. Sarika Gangwar is one of the most trusted plastic and cosmetic surgeons in Haldwani, Uttarakhand. With over 12 years of specialized experience and more than 3,500 successful procedures, she combines surgical precision with an artistic eye to deliver natural, life-changing results. Trained at premier medical institutions across India, Dr. Gangwar brings world-class cosmetic surgery expertise to the Kumaun region, making advanced aesthetic procedures accessible without the need to travel to metro cities.",
+  bio: "Dr. Sarika Gangwar is one of the most trusted plastic and cosmetic surgeons in Haldwani, Uttarakhand. With over 8 years of specialized experience and more than 1,200 successful procedures, she combines surgical precision with an artistic eye to deliver natural, life-changing results. Trained at premier medical institutions across India, Dr. Gangwar brings world-class cosmetic surgery expertise to the Kumaun region, making advanced aesthetic procedures accessible without the need to travel to metro cities.",
   philosophy:
     "Every patient is unique. My approach begins with truly understanding your goals and concerns, followed by an honest assessment of what can be achieved. I believe in enhancing your natural beauty — not changing who you are. Safety, precision, and natural-looking results are the cornerstones of my practice.",
   image: clinicImages.doctor,

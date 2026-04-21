@@ -151,7 +151,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-white/50 md:flex-row lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-white/40 md:flex-row lg:px-8">
           <p>
             &copy; {new Date().getFullYear()} {CLINIC_NAME}. All rights reserved.
           </p>

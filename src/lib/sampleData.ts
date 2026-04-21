@@ -922,46 +922,7 @@ export const services: Service[] = [
     seoDescription: "Confidential male genital surgery in Haldwani, Uttarakhand by Dr. Sarika Gangwar. Expert care and precision.",
     relatedServices: ["gynecomastia", "liposuction"],
   },
-  {
-    title: "Sex Reassignment Surgery",
-    slug: "sex-reassignment-surgery",
-    category: "Genitals",
-    shortDescription:
-      "Comprehensive gender-affirming surgical care with experienced, compassionate support.",
-    overview:
-      "Sex reassignment surgery (gender-affirming surgery) is a life-changing procedure that aligns physical anatomy with gender identity. Dr. Sarika Gangwar provides comprehensive surgical care with compassion, expertise, and respect — supporting patients through their complete transition journey.",
-    whyNeeded:
-      "For individuals experiencing gender dysphoria, gender-affirming surgery is a medically recognized treatment that significantly improves quality of life, mental health, and well-being. It is an essential component of comprehensive gender transition care.",
-    eligibility: [
-      "Documented gender dysphoria",
-      "Letters from qualified mental health professionals",
-      "Hormone therapy as recommended",
-      "Good overall health",
-      "Age 18+ with informed consent",
-    ],
-    procedureSteps: [
-      { step: 1, title: "Comprehensive Consultation", description: "Detailed discussion of goals, expectations, and surgical options. Review of psychological evaluations." },
-      { step: 2, title: "Pre-Operative Preparation", description: "Medical evaluation, hormone level assessment, and surgical planning." },
-      { step: 3, title: "Surgery", description: "Procedure performed with meticulous technique for optimal functional and aesthetic outcomes." },
-      { step: 4, title: "Post-Operative Care", description: "Extended recovery support with detailed aftercare instructions and regular follow-ups." },
-    ],
-    recoveryTimeline: [
-      { period: "Week 1–2", description: "Hospital stay for monitoring. Rest and recovery essential." },
-      { period: "Month 1–2", description: "Gradual return to activities. Regular follow-up visits." },
-      { period: "Month 3–6", description: "Continued healing and adjustment. Ongoing support provided." },
-      { period: "Month 6–12", description: "Full recovery. Final results achieved." },
-    ],
-    results: "Physical alignment with gender identity. Significant improvement in quality of life and psychological well-being.",
-    safetyNotes: "Performed following international standards of care (WPATH). Comprehensive pre-operative evaluation ensures patient readiness and safety.",
-    faqs: [
-      { question: "What are the requirements for surgery?", answer: "Requirements include documented gender dysphoria, mental health evaluation, and hormone therapy duration as per WPATH standards." },
-      { question: "How long is the recovery?", answer: "Full recovery takes 6–12 months with gradual return to activities over this period." },
-    ],
-    heroImage: "/images/svc-sex-reassignment.jpg",
-    seoTitle: "Sex Reassignment Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Compassionate gender-affirming surgery in Haldwani, Uttarakhand. Expert care by Dr. Sarika Gangwar.",
-    relatedServices: ["male-genital-procedures", "breast-augmentation"],
-  },
+ 
 
   /* ==================== HAIR & SKIN ==================== */
   {

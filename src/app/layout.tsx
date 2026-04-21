@@ -25,7 +25,6 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   metadataBase: new URL(SITE_URL),
-  alternates: { canonical: "/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: SITE_TITLE,
@@ -33,6 +32,20 @@ export const metadata: Metadata = {
     siteName: "Dr. Sarika Gangwar",
     locale: "en_IN",
     type: "website",
+    images: [
+      {
+        url: "/images/hero-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Dr. Sarika Gangwar — Best Plastic Surgeon in Haldwani, Uttarakhand",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    images: ["/images/hero-home.jpg"],
   },
 };
 

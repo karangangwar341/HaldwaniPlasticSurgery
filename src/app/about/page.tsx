@@ -11,6 +11,27 @@ export const metadata: Metadata = {
   title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
   description:
     "Learn about Dr. Sarika Gangwar — leading plastic and cosmetic surgeon in Haldwani, Uttarakhand. 8+ years experience, DrNB Plastic Surgery, 1,200+ procedures.",
+  alternates: { canonical: "/about" },
+  keywords: [
+    "Dr Sarika Gangwar",
+    "about Dr Sarika Gangwar",
+    "plastic surgeon haldwani",
+    "DrNB plastic surgery",
+    "best cosmetic surgeon uttarakhand",
+    "plastic surgeon kumaun",
+  ],
+  openGraph: {
+    title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
+    description: "Learn about Dr. Sarika Gangwar — 8+ years experience, DrNB Plastic Surgery, 1,200+ procedures in Haldwani, Uttarakhand.",
+    type: "profile",
+    images: [{ url: "/images/doctor.jpg", width: 800, height: 1067, alt: "Dr. Sarika Gangwar — Plastic Surgeon Haldwani" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
+    description: "8+ years experience, DrNB Plastic Surgery, 1,200+ procedures in Haldwani, Uttarakhand.",
+    images: ["/images/doctor.jpg"],
+  },
 };
 
 export default function AboutPage() {

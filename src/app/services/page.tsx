@@ -10,6 +10,27 @@ export const metadata: Metadata = {
   title: "All Cosmetic Surgery Services | Dr. Sarika Gangwar — Haldwani",
   description:
     "Explore the full range of plastic and cosmetic surgery services offered by Dr. Sarika Gangwar in Haldwani, Uttarakhand. Face, breast, body, hair & more.",
+  alternates: { canonical: "/services" },
+  keywords: [
+    "cosmetic surgery services haldwani",
+    "plastic surgery uttarakhand",
+    "rhinoplasty blepharoplasty breast surgery haldwani",
+    "hair transplant liposuction kumaun",
+    "Dr Sarika Gangwar services",
+    "all plastic surgery procedures haldwani",
+  ],
+  openGraph: {
+    title: "All Cosmetic Surgery Services | Dr. Sarika Gangwar — Haldwani",
+    description: "Explore the full range of plastic and cosmetic surgery services offered by Dr. Sarika Gangwar in Haldwani, Uttarakhand.",
+    type: "website",
+    images: [{ url: "/images/hero-services.jpg", width: 1200, height: 630, alt: "Cosmetic Surgery Services — Dr. Sarika Gangwar Haldwani" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "All Cosmetic Surgery Services | Dr. Sarika Gangwar — Haldwani",
+    description: "Explore the full range of plastic and cosmetic surgery services in Haldwani, Uttarakhand.",
+    images: ["/images/hero-services.jpg"],
+  },
 };
 
 export default function ServicesPage() {

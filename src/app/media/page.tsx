@@ -9,6 +9,26 @@ export const metadata: Metadata = {
   title: "Media & Press | Dr. Sarika Gangwar – Plastic Surgeon Haldwani",
   description:
     "Dr. Sarika Gangwar's media presence – featured in leading newspapers and publications across Uttarakhand for excellence in plastic and cosmetic surgery.",
+  alternates: { canonical: "/media" },
+  keywords: [
+    "Dr Sarika Gangwar media",
+    "plastic surgeon press coverage uttarakhand",
+    "cosmetic surgeon news haldwani",
+    "Dr Sarika Gangwar newspaper",
+    "best plastic surgeon kumaun featured",
+  ],
+  openGraph: {
+    title: "Media & Press | Dr. Sarika Gangwar – Plastic Surgeon Haldwani",
+    description: "Dr. Sarika Gangwar featured in leading newspapers and publications across Uttarakhand for excellence in plastic surgery.",
+    type: "website",
+    images: [{ url: "/images/hero-about.jpg", width: 1200, height: 630, alt: "Dr. Sarika Gangwar Media Coverage" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Media & Press | Dr. Sarika Gangwar – Plastic Surgeon Haldwani",
+    description: "Dr. Sarika Gangwar featured in leading publications across Uttarakhand.",
+    images: ["/images/hero-about.jpg"],
+  },
 };
 
 export const revalidate = 60; // ISR: refresh every 60 s

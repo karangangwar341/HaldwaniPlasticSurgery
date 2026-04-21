@@ -14,6 +14,27 @@ export const metadata: Metadata = {
   title: "Contact Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
   description:
     "Book your consultation with Dr. Sarika Gangwar — leading plastic surgeon in Haldwani, Uttarakhand. WhatsApp, call, or visit our clinic.",
+  alternates: { canonical: "/contact" },
+  keywords: [
+    "contact Dr Sarika Gangwar",
+    "book consultation plastic surgery haldwani",
+    "plastic surgeon appointment uttarakhand",
+    "cosmetic surgery consultation haldwani",
+    "Dr Sarika Gangwar phone number",
+    "Chandan Hospital haldwani plastic surgery",
+  ],
+  openGraph: {
+    title: "Contact Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
+    description: "Book your consultation with Dr. Sarika Gangwar in Haldwani, Uttarakhand. WhatsApp, call, or visit our clinic.",
+    type: "website",
+    images: [{ url: "/images/hero-contact.jpg", width: 1200, height: 630, alt: "Contact Dr. Sarika Gangwar — Haldwani Clinic" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
+    description: "Book your consultation with Dr. Sarika Gangwar — WhatsApp, call, or visit our clinic in Haldwani.",
+    images: ["/images/hero-contact.jpg"],
+  },
 };
 
 export default function ContactPage() {

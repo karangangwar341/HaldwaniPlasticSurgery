@@ -25,6 +25,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: service.seoTitle,
     description: service.seoDescription,
+    alternates: { canonical: `/services/${slug}` },
     keywords: [
       `${service.title.toLowerCase()} haldwani`,
       `${service.title.toLowerCase()} uttarakhand`,
@@ -36,6 +37,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       title: service.seoTitle,
       description: service.seoDescription,
       type: "article",
+      images: [{ url: service.heroImage, width: 1200, height: 630, alt: `${service.title} — Dr. Sarika Gangwar Haldwani` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: service.seoTitle,
+      description: service.seoDescription,
+      images: [service.heroImage],
     },
   };
 }

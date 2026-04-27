@@ -15,8 +15,8 @@
  */
 
 import { createClient } from "@sanity/client";
-import { readFileSync } from "fs";
-import { resolve } from "path";
+import { readFileSync, existsSync } from "fs";
+import { resolve, basename } from "path";
 
 // Manually parse .env.local (works regardless of tsx/Node version)
 try {
@@ -87,12 +87,42 @@ function toBlocks(text: string) {
   ];
 }
 
+/** Upload image to Sanity and return asset ID */
+async function uploadImage(imagePath: string) {
+  if (!imagePath) return null;
+  
+  // Resolve path relative to project root / public
+  const relativePath = imagePath.startsWith("/") ? imagePath.slice(1) : imagePath;
+  const fullPath = resolve(process.cwd(), "public", relativePath);
+  
+  if (!existsSync(fullPath)) {
+    console.warn(`  ⚠  File not found: ${fullPath}`);
+    return null;
+  }
+
+  try {
+    const buffer = readFileSync(fullPath);
+    console.log(`  ⬆  Uploading ${basename(fullPath)}...`);
+    const asset = await client.assets.upload("image", buffer, {
+      filename: basename(fullPath),
+    });
+    return asset._id;
+  } catch (err: any) {
+    console.error(`  ❌ Error uploading ${fullPath}:`, err.message);
+    return null;
+  }
+}
+
 // ── Import Services ───────────────────────────────────────────────────────────
 async function importServices() {
   console.log(`\n📋 Importing ${services.length} services...`);
-  const transaction = client.transaction();
-
+  
   for (const s of services) {
+    console.log(`\n🔹 Processing Service: ${s.title}`);
+    
+    // Upload image if it exists
+    const mainImageAssetId = await uploadImage(s.heroImage);
+
     const doc = {
       _type: "service",
       _id: `service-${s.slug}`,
@@ -123,13 +153,20 @@ async function importServices() {
       })),
       seoTitle: s.seoTitle,
       seoDescription: s.seoDescription,
-      // internalLinks (references) will be wired up in the second pass below
+      mainImage: mainImageAssetId ? {
+        _type: "image",
+        asset: {
+          _type: "reference",
+          _ref: mainImageAssetId,
+        },
+      } : undefined,
     };
-    transaction.createOrReplace(doc as Parameters<typeof transaction.createOrReplace>[0]);
+
+    await client.createOrReplace(doc);
+    console.log(`  ✓  Service "${s.title}" imported`);
   }
 
-  await transaction.commit({ visibility: "async" });
-  console.log(`✓ ${services.length} services imported`);
+  console.log(`✓ All ${services.length} services processed`);
 }
 
 /** Second pass: wire up internalLinks (relatedServices → document references) */
@@ -173,31 +210,47 @@ async function importTestimonials() {
   console.log(`✓ ${testimonials.length} testimonials imported`);
 }
 
-// ── Import Results (Before/After) — text fields only ─────────────────────────
-// NOTE: Images must be uploaded manually via Sanity Studio
-// (the heroImage URLs are placeholder Unsplash links, not uploadable via API without extra steps)
+// ── Import Results (Before/After) ─────────────────────────────────────────────
 async function importResults() {
-  console.log(`\n🖼  Importing ${results.length} result captions...`);
-  const transaction = client.transaction();
+  console.log(`\n🖼  Importing ${results.length} results...`);
 
-  results.forEach((r, i) => {
-    transaction.createOrReplace({
+  for (let i = 0; i < results.length; i++) {
+    const r = results[i];
+    console.log(`\n📸 Processing Result: ${r.caption}`);
+
+    const beforeAssetId = await uploadImage(r.beforeImage);
+    const afterAssetId = await uploadImage(r.afterImage);
+
+    const doc = {
       _type: "result",
       _id: `result-${i + 1}`,
       caption: r.caption,
       locationTag: r.location,
-      // service reference (links to the imported service doc)
       service: {
         _type: "reference",
         _ref: `service-${r.serviceSlug}`,
       },
-      // beforeImage / afterImage: upload manually in Studio or extend this
-      // script using client.assets.upload() with the Unsplash URLs
-    });
-  });
+      beforeImage: beforeAssetId ? {
+        _type: "image",
+        asset: {
+          _type: "reference",
+          _ref: beforeAssetId,
+        },
+      } : undefined,
+      afterImage: afterAssetId ? {
+        _type: "image",
+        asset: {
+          _type: "reference",
+          _ref: afterAssetId,
+        },
+      } : undefined,
+    };
 
-  await transaction.commit({ visibility: "async" });
-  console.log(`✓ ${results.length} result records imported (images need manual upload)`);
+    await client.createOrReplace(doc);
+    console.log(`  ✓  Result record "${r.id}" imported`);
+  }
+
+  console.log(`✓ All ${results.length} result records imported`);
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -221,3 +274,4 @@ main().catch((err) => {
   console.error("\n❌ Import failed:", err.message);
   process.exit(1);
 });
+

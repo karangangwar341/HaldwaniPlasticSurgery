@@ -168,6 +168,7 @@ export default function Navbar() {
 
           {[
             { label: "Results", href: "/results" },
+            { label: "Testimonials", href: "/#testimonials" },
             { label: "Media", href: "/media" },
             { label: "Contact", href: "/contact" },
           ].map((link) => (
@@ -282,6 +283,7 @@ export default function Navbar() {
 
             {[
               { label: "Results", href: "/results" },
+              { label: "Testimonials", href: "/#testimonials" },
               { label: "Media", href: "/media" },
               { label: "Contact", href: "/contact" },
             ].map((link) => (

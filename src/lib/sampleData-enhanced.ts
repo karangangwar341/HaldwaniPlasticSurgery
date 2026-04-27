@@ -1016,15 +1016,3 @@ export const results: ResultItem[] = [
     location: "Haldwani, Uttarakhand",
   },
 ];
-
-/* ================================================================ */
-/*  HELPERS                                                         */
-/* ================================================================ */
-
-export function getServiceBySlug(slug: string) {
-  return services.find((s) => s.slug === slug);
-}
-
-export function getRelatedServices(slugs: string[]) {
-  return services.filter((s) => slugs.includes(s.slug));
-}

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
-import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
+import ResultsGallery from "@/components/ResultsGallery";
 import { results } from "@/lib/sampleData";
 
 export const metadata: Metadata = {
@@ -32,8 +32,6 @@ export const metadata: Metadata = {
 };
 
 export default function ResultsPage() {
-  const uniqueServices = [...new Set(results.map((r) => r.serviceTitle))];
-
   return (
     <>
       <HeroSection
@@ -44,34 +42,7 @@ export default function ResultsPage() {
       />
 
       <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          {/* Filter labels */}
-          <div className="mb-12 flex flex-wrap items-center justify-center gap-3">
-            <span className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white">
-              All Results
-            </span>
-            {uniqueServices.map((service) => (
-              <span
-                key={service}
-                className="rounded-full border border-cream-dark bg-cream px-5 py-2 text-sm font-medium text-primary/70"
-              >
-                {service}
-              </span>
-            ))}
-          </div>
-
-          {/* Results Grid */}
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {results.map((r) => (
-              <BeforeAfterSlider
-                key={r.id}
-                beforeImage={r.beforeImage}
-                afterImage={r.afterImage}
-                caption={r.caption}
-              />
-            ))}
-          </div>
-        </div>
+        <ResultsGallery results={results} />
       </section>
 
       <CTASection

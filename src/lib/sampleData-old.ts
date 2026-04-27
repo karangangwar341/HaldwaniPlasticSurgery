@@ -1,9 +1,8 @@
 import { ServiceCategory } from "./constants";
 
-/* ================================================================ */
-/*  COMPLETE SAMPLE DATA - ALL 19 SERVICES ENHANCED & OPTIMIZED    */
-/*  Dr. Sarika Gangwar - Plastic & Cosmetic Surgery Haldwani       */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Types                                                              */
+/* ------------------------------------------------------------------ */
 
 export interface Service {
   title: string;
@@ -54,37 +53,41 @@ export interface DoctorInfo {
 }
 
 const clinicImages = {
-  doctor: "/images/doctor.jpg",
-  resultRhinoplastyBefore: "/images/result-rhinoplasty-before.jpg",
-  resultRhinoplastyAfter: "/images/result-rhinoplasty-after.jpg",
+  doctor:   "/images/doctor.jpg",
+
+  resultRhinoplastyBefore:  "/images/result-rhinoplasty-before.jpg",
+  resultRhinoplastyAfter:   "/images/result-rhinoplasty-after.jpg",
   resultGynecomastiaBefore: "/images/result-gynecomastia-before.jpg",
-  resultGynecomastiaAfter: "/images/result-gynecomastia-after.jpg",
-  resultLiposuctionBefore: "/images/result-liposuction-before.jpg",
-  resultLiposuctionAfter: "/images/result-liposuction-after.jpg",
-  resultHairBefore: "/images/result-hair-before.jpg",
-  resultHairAfter: "/images/result-hair-after.jpg",
-  resultFaceBefore: "/images/result-facelift-before.jpg",
-  resultFaceAfter: "/images/result-facelift-after.jpg",
-  resultTummyBefore: "/images/result-tummy-before.jpg",
-  resultTummyAfter: "/images/result-tummy-after.jpg",
+  resultGynecomastiaAfter:  "/images/result-gynecomastia-after.jpg",
+  resultLiposuctionBefore:  "/images/result-liposuction-before.jpg",
+  resultLiposuctionAfter:   "/images/result-liposuction-after.jpg",
+  resultHairBefore:         "/images/result-hair-before.jpg",
+  resultHairAfter:          "/images/result-hair-after.jpg",
+  resultFaceBefore:         "/images/result-facelift-before.jpg",
+  resultFaceAfter:          "/images/result-facelift-after.jpg",
+  resultTummyBefore:        "/images/result-tummy-before.jpg",
+  resultTummyAfter:         "/images/result-tummy-after.jpg",
   resultBlepharoplastyBefore: "/images/result-blepharoplasty-before.jpg",
-  resultBlepharoplastyAfter: "/images/result-blepharoplasty-after.jpg",
-  resultBreastAugBefore: "/images/result-breast-aug-before.jpg",
-  resultBreastAugAfter: "/images/result-breast-aug-after.jpg",
-  resultLipBefore: "/images/result-lip-before.jpg",
-  resultLipAfter: "/images/result-lip-after.jpg",
-  resultEarBefore: "/images/result-ear-before.jpg",
-  resultEarAfter: "/images/result-ear-after.jpg",
+  resultBlepharoplastyAfter:  "/images/result-blepharoplasty-after.jpg",
+  resultBreastAugBefore:    "/images/result-breast-aug-before.jpg",
+  resultBreastAugAfter:     "/images/result-breast-aug-after.jpg",
+  resultLipBefore:          "/images/result-lip-before.jpg",
+  resultLipAfter:           "/images/result-lip-after.jpg",
+  resultEarBefore:          "/images/result-ear-before.jpg",
+  resultEarAfter:           "/images/result-ear-after.jpg",
 };
 
-/* ================================================================ */
-/*  DOCTOR INFO                                                      */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Doctor Info                                                        */
+/* ------------------------------------------------------------------ */
 
 export const doctorInfo: DoctorInfo = {
   name: "Dr. Sarika Gangwar",
   title: "Senior Consultant — Plastic & Cosmetic Surgery",
-  qualifications: ["MBBS", "DrNB (Plastic Surgery)"],
+  qualifications: [
+    "MBBS",
+    "DrNB (Plastic Surgery)"
+  ],
   specializations: [
     "Facial Rejuvenation & Rhinoplasty",
     "Body Contouring & Liposuction",
@@ -99,12 +102,12 @@ export const doctorInfo: DoctorInfo = {
   image: clinicImages.doctor,
 };
 
-/* ================================================================ */
-/*  ALL 19 SERVICES - FULLY ENHANCED & E-E-A-T OPTIMIZED            */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Services                                                           */
+/* ------------------------------------------------------------------ */
 
 export const services: Service[] = [
-  /* ==================== FACE (7 SERVICES) ==================== */
+  /* ==================== FACE ==================== */
   {
     title: "Face Lift",
     slug: "face-lift",
@@ -133,10 +136,12 @@ export const services: Service[] = [
       { question: "Will my face look 'pulled' or unnatural?", answer: "Absolutely not. Dr. Gangwar specializes in natural-looking results by repositioning deep tissues rather than simply pulling skin tight. The goal is a refreshed appearance that maintains your natural facial expressions and identity." },
       { question: "What is the ideal age for a face lift?", answer: "Most patients are between 40 and 70, but candidacy depends on skin quality, facial aging patterns, and personal goals rather than age alone. Some patients seek it at 45; others wait until 65. The right time is when you feel it's right for you." },
       { question: "Can a face lift be combined with other procedures?", answer: "Yes, and it's quite common. It pairs beautifully with eyelid surgery (blepharoplasty), brow lift, rhinoplasty, or fat grafting for comprehensive facial rejuvenation. Dr. Gangwar can combine procedures in a single session to reduce total recovery time." },
+      { question: "What about scars?", answer: "Scars are typically hidden along the hairline and around the ears in natural creases. Within 6–12 months, they fade significantly and become virtually invisible, especially when hair covers the scalp incisions." },
+      { question: "Is there a non-surgical alternative?", answer: "While injectables and laser treatments provide temporary improvements, they cannot address the structural issues that a face lift corrects. For significant aging, face lift offers superior, lasting results." },
     ],
     heroImage: "/images/svc-face-lift.jpg",
     seoTitle: "Face Lift Surgery in Haldwani | Dr. Sarika Gangwar | Natural Results",
-    seoDescription: "Get a natural-looking face lift in Haldwani, Uttarakhand with Dr. Sarika Gangwar. Advanced rhytidectomy techniques, 8+ years experience. Book consultation.",
+    seoDescription: "Get a natural-looking face lift in Haldwani, Uttarakhand with Dr. Sarika Gangwar. Advanced rhytidectomy techniques, 8+ years experience, 1200+ procedures. Book consultation.",
     relatedServices: ["brow-lift", "blepharoplasty", "rhinoplasty"],
   },
   {
@@ -144,7 +149,7 @@ export const services: Service[] = [
     slug: "brow-lift",
     category: "Face",
     shortDescription: "Elevate drooping brows and smooth forehead wrinkles for a refreshed, more alert appearance.",
-    overview: "A brow lift (forehead lift) elevates the eyebrows and reduces forehead creases, frown lines, and hooding over the eyes. Dr. Sarika Gangwar performs endoscopic brow lifts through small hidden incisions, minimizing scarring and recovery time while delivering a naturally refreshed look. This procedure opens the eye area, reduces forehead lines, and creates a more youthful, alert facial expression.",
+    overview: "A brow lift (forehead lift) elevates the eyebrows and reduces forehead creases, frown lines, and hooding over the eyes. Dr. Sarika Gangwar performs both traditional and endoscopic brow lifts, with the endoscopic approach being her preferred method due to minimal scarring and faster recovery. This procedure opens the eye area, reduces forehead lines, and creates a more youthful, alert facial expression.",
     whyNeeded: "Drooping eyebrows can make you look tired, sad, or angry — even when you feel great. This is caused by age-related loss of facial elasticity, gravity, and changes in skin texture. A brow lift corrects the position of the brows to open up the eye area and smooth deep forehead lines that resist Botox or fillers. The result is a dramatically more refreshed appearance.",
     eligibility: ["Adults with drooping or asymmetric brows", "Deep forehead lines or frown lines", "Good general health", "Non-smokers or willing to quit before surgery", "Realistic expectations about outcomes"],
     procedureSteps: [
@@ -163,13 +168,14 @@ export const services: Service[] = [
     results: "A more youthful, alert appearance with a smoother forehead and elevated brows. Frown lines are significantly reduced. Results last 5–10 years, with many patients seeing excellent results at the 10-year mark. You'll look naturally refreshed, not overdone.",
     safetyNotes: "The endoscopic technique minimizes risks and avoids the longer incisions of traditional brow lifts. The procedure is performed under strict surgical safety protocols with proper anesthesia monitoring. Nerve damage is extremely rare with this technique.",
     faqs: [
-      { question: "Is a brow lift the same as Botox?", answer: "No, they're very different. Botox temporarily relaxes muscles for 3–4 months, while a brow lift physically repositions the brow for longer-lasting results that can last 5–10 years." },
+      { question: "Is a brow lift the same as Botox?", answer: "No, they're very different. Botox temporarily relaxes muscles for 3–4 months, while a brow lift physically repositions the brow for longer-lasting results that can last 5–10 years. Brow lift is permanent, while Botox requires regular maintenance." },
       { question: "Will I have visible scars?", answer: "No. Incisions are hidden behind the hairline and become completely invisible once healed. The endoscopic technique ensures minimal scarring." },
-      { question: "Can it be combined with eyelid surgery?", answer: "Yes, absolutely. A brow lift pairs beautifully with blepharoplasty for comprehensive upper-face rejuvenation." },
+      { question: "Can it be combined with eyelid surgery?", answer: "Yes, absolutely. A brow lift pairs beautifully with blepharoplasty for comprehensive upper-face rejuvenation. Combined procedures can often be done in a single session." },
+      { question: "At what age should I consider a brow lift?", answer: "Most patients are in their 40s–60s, but it depends on individual brow position and forehead lines rather than age. Some patients need it earlier; others wait longer." },
     ],
     heroImage: "/images/svc-brow-lift.jpg",
-    seoTitle: "Brow Lift Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert brow lift and endoscopic forehead lift in Haldwani. Minimal scars, quick recovery by Dr. Sarika Gangwar.",
+    seoTitle: "Brow Lift Surgery in Haldwani | Dr. Sarika Gangwar | Forehead Lift",
+    seoDescription: "Expert brow lift and endoscopic forehead lift in Haldwani, Uttarakhand. Refresh your appearance with Dr. Sarika Gangwar. Minimal scars, quick recovery.",
     relatedServices: ["face-lift", "blepharoplasty", "rhinoplasty"],
   },
   {
@@ -199,157 +205,200 @@ export const services: Service[] = [
       { question: "Will blepharoplasty change my eye shape?", answer: "No. The goal is to rejuvenate the area around the eyes by removing excess skin and fat while preserving your natural eye shape, size, and expression." },
       { question: "Can I get upper and lower lids done together?", answer: "Yes. Many patients opt for combined upper and lower blepharoplasty for comprehensive eye rejuvenation in a single procedure." },
       { question: "At what age is blepharoplasty recommended?", answer: "While most common in patients 35+, it depends on individual anatomy. Some patients seek it earlier due to genetic under-eye bags; others wait until age 60+." },
+      { question: "Will I have visible scars?", answer: "Incisions are placed in natural creases or hidden inside the lid, becoming virtually invisible once fully healed." },
+      { question: "Is vision affected?", answer: "No. Blepharoplasty does not affect vision. In fact, if drooping upper eyelids were obstructing peripheral vision, the surgery improves it." },
     ],
     heroImage: "/images/svc-blepharoplasty.jpg",
     seoTitle: "Blepharoplasty (Eyelid Surgery) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert eyelid surgery in Haldwani. Remove baggy eyelids and under-eye bags. Natural results by Dr. Sarika Gangwar.",
+    seoDescription: "Expert eyelid surgery in Haldwani, Uttarakhand. Remove baggy eyelids and under-eye bags. Natural results by Dr. Sarika Gangwar. Book now.",
     relatedServices: ["face-lift", "brow-lift", "lip-enhancement-reduction"],
   },
   {
     title: "Rhinoplasty (Nose Job)",
     slug: "rhinoplasty",
     category: "Face",
-    shortDescription: "Reshape your nose for better proportion, symmetry, and breathing with expert rhinoplasty surgery.",
-    overview: "Rhinoplasty is one of the most transformative facial procedures. Dr. Sarika Gangwar performs both cosmetic and functional rhinoplasty — reshaping the nose to achieve facial harmony while improving breathing when needed. Using advanced open and closed techniques, she delivers precise, natural results tailored to Indian facial anatomy. With over 8 years of specialized experience and 1200+ procedures, Dr. Gangwar is known for creating beautiful, natural-looking noses.",
-    whyNeeded: "The nose is the central feature of the face. A disproportionate, crooked, or bulbous nose can affect facial balance, breathing, and self-confidence significantly. Structural issues like a deviated septum can cause breathing difficulties that affect quality of life. Rhinoplasty addresses both aesthetic concerns and functional problems in a single procedure, often with life-changing results.",
-    eligibility: ["Adults with cosmetic concerns about nasal shape, size, or proportion", "Patients with breathing difficulties due to nasal structure", "Nasal growth must be complete (typically age 16+)", "Good overall health without uncontrolled conditions", "Non-smokers for optimal healing"],
+    shortDescription:
+      "Reshape your nose for better proportion, symmetry, and breathing with expert rhinoplasty surgery.",
+    overview:
+      "Rhinoplasty is one of the most transformative facial procedures. Dr. Sarika Gangwar performs both cosmetic and functional rhinoplasty — reshaping the nose to achieve facial harmony while improving breathing when needed. Using advanced open and closed techniques, she delivers precise, natural results tailored to Indian facial anatomy.",
+    whyNeeded:
+      "The nose is the central feature of the face. A disproportionate, crooked, or bulbous nose can affect facial balance and self-confidence. Additionally, structural issues like a deviated septum can cause breathing difficulties. Rhinoplasty addresses both aesthetic concerns and functional problems in a single procedure.",
+    eligibility: [
+      "Adults with cosmetic concerns about nasal shape or size",
+      "Patients with breathing difficulties due to nasal structure",
+      "Nasal growth must be complete (typically age 16+)",
+      "Good overall health",
+      "Non-smokers",
+    ],
     procedureSteps: [
-      { step: 1, title: "In-Depth Consultation & Planning", description: "Advanced 3D imaging and detailed discussion of desired changes. Thorough analysis of nasal structure, skin thickness, and facial proportions." },
-      { step: 2, title: "Anesthesia", description: "General anesthesia administered for patient comfort, safety, and optimal surgical precision." },
-      { step: 3, title: "Surgical Reshaping", description: "Bone and cartilage carefully reshaped through closed (internal) or open (external) approach based on complexity and desired outcome." },
-      { step: 4, title: "Septum & Internal Correction", description: "If needed, deviated septum is straightened to improve airflow and breathing function." },
-      { step: 5, title: "Splinting & Closure", description: "Nasal splint applied for support and protection. Internal packing used as needed. Careful closure with meticulous technique." },
+      { step: 1, title: "In-Depth Consultation", description: "3D imaging and detailed discussion of desired changes. Analysis of nasal structure and skin thickness." },
+      { step: 2, title: "Anesthesia", description: "General anesthesia for patient comfort and precision." },
+      { step: 3, title: "Surgical Reshaping", description: "Bone and cartilage reshaped through closed (internal) or open (external) approach based on complexity." },
+      { step: 4, title: "Septum Correction", description: "If needed, deviated septum is straightened to improve airflow." },
+      { step: 5, title: "Splinting & Recovery", description: "Nasal splint applied for support. Internal packing removed within 1–2 days." },
     ],
     recoveryTimeline: [
-      { period: "Day 1–3", description: "Nasal splint in place. Mild discomfort and congestion. Rest required. Most patients report this is easier than expected." },
-      { period: "Week 1", description: "Splint removed by Dr. Gangwar. Significant swelling begins to subside. Bruising visible but gradually fading. Avoid wearing glasses." },
-      { period: "Week 2–4", description: "Most visible swelling resolves. Return to work and daily activities. Light exercise may resume. Breathing improves noticeably." },
-      { period: "Month 3–12", description: "Subtle refinements continue as the nose settles into its final shape. Most major changes visible at 6 weeks, but final perfection takes 12 months." },
+      { period: "Day 1–3", description: "Nasal splint in place. Mild discomfort and congestion. Rest required." },
+      { period: "Week 1", description: "Splint removed. Significant swelling subsides. Avoid glasses." },
+      { period: "Week 2–4", description: "Most visible swelling resolves. Return to work." },
+      { period: "Month 3–12", description: "Subtle refinements continue as the nose settles into its final shape." },
     ],
-    results: "A balanced, proportionate nose that harmonizes beautifully with your facial features. Improved breathing in functional cases. Results are permanent. Patients report transformation in confidence, breathing comfort, and overall facial aesthetics.",
-    safetyNotes: "Rhinoplasty demands the highest surgical precision and artistic skill. Dr. Gangwar's extensive training from premier institutions and 1200+ procedures ensure safe, predictable outcomes. All procedures performed in fully equipped surgical facility with strict safety protocols.",
+    results: "A balanced, proportionate nose that harmonizes with your facial features. Improved breathing in functional cases. Results are permanent.",
+    safetyNotes: "Rhinoplasty demands the highest surgical precision. Dr. Gangwar's extensive training and experience ensure safe, predictable outcomes. Revision rates are minimized through meticulous pre-operative planning.",
     faqs: [
-      { question: "Will my nose look natural?", answer: "Absolutely. Dr. Gangwar specializes in creating natural-looking noses that complement your unique facial features — never the 'plastic surgery' look. Each nose is designed specifically for your face." },
-      { question: "Can rhinoplasty fix breathing problems?", answer: "Yes. Functional rhinoplasty corrects structural issues like deviated septum while improving the nose's appearance." },
-      { question: "How long until I see the final result?", answer: "Major changes are visible at 4–6 weeks. The final result with all subtle refinements typically emerges over 12 months as all swelling resolves completely." },
+      { question: "Will my nose look natural?", answer: "Absolutely. Dr. Gangwar designs each rhinoplasty to complement your unique facial features, avoiding the 'done' look." },
+      { question: "Can rhinoplasty fix breathing problems?", answer: "Yes. Functional rhinoplasty corrects structural issues like a deviated septum while improving nasal aesthetics." },
+      { question: "How long until I see the final result?", answer: "While major changes are visible at 4–6 weeks, the final result with all subtle refinements is typically seen at 12 months." },
+      { question: "Is rhinoplasty painful?", answer: "Most patients report mild discomfort rather than pain. Congestion is the primary sensation during the first week." },
     ],
     heroImage: "/images/svc-rhinoplasty.jpg",
     seoTitle: "Rhinoplasty (Nose Job) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best rhinoplasty surgeon in Haldwani. Expert nose reshaping by Dr. Sarika Gangwar. 1200+ procedures. Cosmetic + functional.",
+    seoDescription: "Best rhinoplasty surgeon in Haldwani, Uttarakhand. Expert nose reshaping by Dr. Sarika Gangwar. Cosmetic + functional nose surgery. Book now.",
     relatedServices: ["face-lift", "chin-correction", "lip-enhancement-reduction"],
   },
   {
     title: "Lip Enhancement / Reduction",
     slug: "lip-enhancement-reduction",
     category: "Face",
-    shortDescription: "Achieve perfectly proportioned lips — whether you want fuller volume or a refined reduction.",
-    overview: "Dr. Sarika Gangwar offers both lip augmentation and lip reduction procedures to create beautifully balanced, natural-looking lips. Using advanced techniques including autologous fat grafting, lip lifts, and surgical reduction, she helps patients achieve their desired lip shape, size, and proportion. Each procedure is customized to individual facial anatomy and aesthetic goals.",
-    whyNeeded: "Lip proportions significantly impact facial aesthetics and expression. Thin lips can appear aged or make the face look tired, while overly full lips may feel disproportionate or unnatural. Lip procedures restore or create perfect harmony with the rest of your facial features, often dramatically improving overall appearance.",
-    eligibility: ["Adults seeking lip volume or reduction", "Good oral and overall health", "No active cold sores or oral infections", "Realistic expectations about outcomes"],
+    shortDescription:
+      "Achieve perfectly proportioned lips — whether you want fuller volume or a refined reduction.",
+    overview:
+      "Dr. Sarika Gangwar offers both lip augmentation and lip reduction procedures to create beautifully balanced, natural-looking lips. Using advanced techniques including fat grafting, lip lifts, and surgical reduction, she helps patients achieve their desired lip shape and proportion.",
+    whyNeeded:
+      "Lip proportions significantly impact facial aesthetics. Thin lips can appear aged, while overly full lips may feel disproportionate. Lip procedures restore or create harmony with the rest of your facial features.",
+    eligibility: [
+      "Adults seeking lip volume or reduction",
+      "Good oral and overall health",
+      "No active cold sores or oral infections",
+      "Realistic expectations about outcomes",
+    ],
     procedureSteps: [
-      { step: 1, title: "Detailed Consultation", description: "Assessment of natural lip anatomy, facial proportions, and desired outcome. Discussion of different techniques available." },
-      { step: 2, title: "Anesthesia", description: "Local anesthesia with optional sedation for maximum comfort during the procedure." },
-      { step: 3, title: "Procedure", description: "Fat grafting for enhancement or precise tissue removal for reduction, using careful techniques to maintain natural movement." },
-      { step: 4, title: "Recovery", description: "Dissolvable or removable sutures close incisions. Lips heal rapidly with proper care and protection." },
+      { step: 1, title: "Consultation", description: "Assessment of lip shape, facial proportions, and desired outcome." },
+      { step: 2, title: "Anesthesia", description: "Local anesthesia with optional sedation." },
+      { step: 3, title: "Procedure", description: "Fat grafting for enhancement or tissue removal for reduction, using precise techniques." },
+      { step: 4, title: "Recovery", description: "Sutures close incisions. Lips heal rapidly with proper care." },
     ],
     recoveryTimeline: [
-      { period: "Day 1–3", description: "Swelling is significant but expected and normal. Soft diet recommended. Pain minimal, easily managed with medication." },
-      { period: "Week 1", description: "Swelling reduces noticeably. Resume normal eating and drinking. Sutures removed if needed." },
-      { period: "Week 2–4", description: "Final shape begins to emerge beautifully. Normal activities resume. Slight overcorrection settles naturally." },
+      { period: "Day 1–3", description: "Swelling is significant but expected. Soft diet recommended." },
+      { period: "Week 1", description: "Swelling reduces noticeably. Resume normal eating." },
+      { period: "Week 2–4", description: "Final shape begins to emerge. Normal activities resume." },
     ],
-    results: "Beautifully proportioned, full lips that complement your facial features perfectly. Results from fat grafting are long-lasting (typically 3–5 years with gradual softening). Surgical reduction provides permanent results.",
-    safetyNotes: "All lip procedures are performed under sterile conditions with precise technique to minimize scarring. Incisions are strategically placed within natural lip lines where they become virtually invisible.",
+    results: "Beautifully proportioned lips that complement your facial features. Results from fat grafting are long-lasting.",
+    safetyNotes: "All lip procedures are performed under sterile conditions with precise technique to minimize scarring. Incisions are placed within natural lip lines.",
     faqs: [
-      { question: "Is lip enhancement permanent?", answer: "Autologous fat grafting provides long-lasting results. Some volume may settle in the first few months, but results typically last 3–5+ years." },
-      { question: "How noticeable are scars?", answer: "Incisions are hidden within the lip border and become virtually invisible once fully healed." },
-      { question: "Will my lips feel natural?", answer: "Yes. Fat-grafted lips feel completely natural and move naturally with facial expressions." },
+      { question: "Is lip enhancement permanent?", answer: "Fat grafting provides long-lasting results. Some volume may settle in the first few months, so slight overcorrection is planned." },
+      { question: "How noticeable are scars?", answer: "Incisions are hidden within the lip border and become virtually invisible once healed." },
     ],
     heroImage: "/images/svc-lip-enhancement.jpg",
     seoTitle: "Lip Enhancement & Reduction in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert lip enhancement and reduction surgery in Haldwani. Natural-looking lip procedures by Dr. Sarika Gangwar.",
+    seoDescription: "Expert lip enhancement and lip reduction surgery in Haldwani. Natural-looking lip procedures by Dr. Sarika Gangwar. Consultation available.",
     relatedServices: ["rhinoplasty", "chin-correction", "face-lift"],
   },
   {
     title: "Chin Correction",
     slug: "chin-correction",
     category: "Face",
-    shortDescription: "Sculpt a stronger, more balanced chin profile with genioplasty or chin implants.",
-    overview: "Chin correction (genioplasty or mentoplasty) reshapes the chin to create better facial balance, profile harmony, and jawline definition. Dr. Sarika Gangwar uses bone repositioning (sliding genioplasty) or custom implants depending on the patient's anatomy and goals, delivering a more defined jawline and harmonious facial profile. Chin correction often has a dramatic impact on overall facial aesthetics.",
-    whyNeeded: "A weak, receding, or overly prominent chin disrupts facial proportion and can significantly affect how others perceive your appearance. Chin correction restores perfect balance between the nose, lips, and chin — often producing dramatic improvement in overall facial aesthetics and profile harmony.",
-    eligibility: ["Adults with chin disproportion affecting facial balance", "Good dental and jaw health", "Facial bone growth complete (typically 18+)", "Good overall health", "Realistic expectations"],
+    shortDescription:
+      "Sculpt a stronger, more balanced chin profile with genioplasty or chin implants.",
+    overview:
+      "Chin correction (genioplasty or mentoplasty) reshapes the chin to create better facial balance and profile. Dr. Sarika Gangwar uses bone repositioning or implants depending on the patient's anatomy and goals, delivering a more defined jawline and harmonious profile.",
+    whyNeeded:
+      "A weak, receding, or overly prominent chin disrupts facial proportion. Chin correction restores balance between the nose, lips, and chin — often producing a dramatic improvement in overall facial aesthetics.",
+    eligibility: [
+      "Adults with chin disproportion",
+      "Good dental and jaw health",
+      "Facial bone growth complete (typically 18+)",
+      "Good overall health",
+    ],
     procedureSteps: [
-      { step: 1, title: "Comprehensive Facial Analysis", description: "Cephalometric analysis, imaging, and facial proportion assessment to plan precise chin repositioning. 3D visualization shows expected results." },
-      { step: 2, title: "Anesthesia", description: "General anesthesia for sliding genioplasty; local with sedation for implant placement." },
-      { step: 3, title: "Surgical Correction", description: "Bone is carefully repositioned (genioplasty) or a custom implant is precisely placed through a concealed intraoral incision." },
-      { step: 4, title: "Stabilization & Closure", description: "Bone fixation with plates and screws if needed. Incisions closed with dissolvable sutures. Supportive bandage applied." },
+      { step: 1, title: "Facial Analysis", description: "Cephalometric analysis and imaging to plan precise chin repositioning." },
+      { step: 2, title: "Anesthesia", description: "General anesthesia for sliding genioplasty; local for implants." },
+      { step: 3, title: "Surgical Correction", description: "Bone is repositioned (genioplasty) or a custom implant is placed through a concealed incision." },
+      { step: 4, title: "Recovery", description: "Supportive bandage applied. Soft diet for the first week." },
     ],
     recoveryTimeline: [
-      { period: "Day 1–3", description: "Chin swelling and mild numbness (temporary). Pain easily managed with medication. Rest and head elevation important." },
-      { period: "Week 1–2", description: "Swelling subsides noticeably. Soft diet gradually transitions to normal eating. Numbness resolves." },
-      { period: "Week 3–6", description: "Return to full activities including exercise. Final contour emerges beautifully." },
+      { period: "Day 1–3", description: "Chin swelling and numbness. Pain managed with medication." },
+      { period: "Week 1–2", description: "Swelling subsides. Soft diet transitions to normal eating." },
+      { period: "Week 3–6", description: "Return to full activities. Final contour emerges." },
     ],
-    results: "A more defined, proportionate chin that enhances your entire facial profile dramatically. Results are permanent. Most patients report dramatically improved confidence and satisfaction with their appearance.",
-    safetyNotes: "Procedure performed with careful nerve monitoring to preserve chin sensation. Dr. Gangwar uses anatomically precise techniques refined through 1200+ procedures. Modern biocompatible implants are used when needed.",
+    results: "A more defined, proportionate chin that enhances your entire facial profile. Results are permanent.",
+    safetyNotes: "Procedure performed with careful nerve monitoring to preserve chin sensation. Dr. Gangwar uses anatomically precise techniques.",
     faqs: [
-      { question: "Implant or bone surgery — which is better?", answer: "It depends on your anatomy. Sliding genioplasty offers more flexibility for repositioning the entire chin, while implants are simpler and less invasive for augmentation-only cases." },
-      { question: "Are chin implants safe?", answer: "Yes. Modern biocompatible implants (silicone or Gore-Tex) are well-tolerated and have excellent long-term safety records spanning decades." },
+      { question: "Implant or bone surgery — which is better?", answer: "It depends on your anatomy. Sliding genioplasty offers more options for repositioning, while implants are simpler for augmentation-only cases." },
+      { question: "Are chin implants safe?", answer: "Yes. Modern biocompatible implants are well-tolerated and have a long safety record." },
     ],
     heroImage: "/images/svc-chin-correction.jpg",
-    seoTitle: "Chin Correction & Genioplasty in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert chin correction and genioplasty in Haldwani. Define your jawline and improve facial profile with Dr. Sarika Gangwar.",
+    seoTitle: "Chin Correction Surgery in Haldwani | Dr. Sarika Gangwar",
+    seoDescription: "Expert chin correction and genioplasty in Haldwani, Uttarakhand. Improve your facial profile with Dr. Sarika Gangwar.",
     relatedServices: ["rhinoplasty", "face-lift", "lip-enhancement-reduction"],
   },
   {
     title: "Ear Reshaping",
     slug: "ear-reshaping",
     category: "Face",
-    shortDescription: "Correct protruding, asymmetric, or misshapen ears with otoplasty for a more natural look.",
-    overview: "Ear reshaping (otoplasty) corrects prominent, protruding, or misshapen ears. Dr. Sarika Gangwar reshapes the ear cartilage through discreet incisions behind the ears, creating a natural contour that sits closer to the head and boosts confidence. This procedure is popular for both children (from age 5) and adults.",
-    whyNeeded: "Prominent or asymmetric ears can cause self-consciousness, especially in children and young adults. Otoplasty provides a permanent correction that looks completely natural. For children, early correction prevents psychological distress and social difficulties.",
-    eligibility: ["Children aged 5+ (ears are nearly fully grown by age 5)", "Adults with prominent or asymmetric ears", "Good general health", "No active ear infections"],
+    shortDescription:
+      "Correct protruding, asymmetric, or misshapen ears with otoplasty for a more natural look.",
+    overview:
+      "Ear reshaping (otoplasty) corrects prominent, protruding, or misshapen ears. Dr. Sarika Gangwar reshapes the ear cartilage through discreet incisions behind the ears, creating a natural contour that sits closer to the head and boosts confidence.",
+    whyNeeded:
+      "Prominent or asymmetric ears can cause self-consciousness, especially in children and young adults. Otoplasty provides a permanent correction that looks completely natural.",
+    eligibility: [
+      "Children aged 5+ (ears are nearly fully grown by age 5)",
+      "Adults with prominent or asymmetric ears",
+      "Good general health",
+      "No ear infections",
+    ],
     procedureSteps: [
-      { step: 1, title: "Consultation", description: "Assessment of ear shape, symmetry, and surgical goals. Photography for planning." },
+      { step: 1, title: "Consultation", description: "Assessment of ear shape, symmetry, and surgical goals." },
       { step: 2, title: "Anesthesia", description: "Local anesthesia (adults) or general anesthesia (children)." },
-      { step: 3, title: "Cartilage Reshaping", description: "Incisions behind the ear; cartilage is reshaped and secured in the new position." },
-      { step: 4, title: "Recovery", description: "Headband worn for protection. Rapid healing begins immediately." },
+      { step: 3, title: "Cartilage Reshaping", description: "Incisions behind the ear; cartilage is reshaped and secured." },
+      { step: 4, title: "Recovery", description: "Headband worn for protection. Rapid healing." },
     ],
     recoveryTimeline: [
       { period: "Day 1–3", description: "Mild discomfort. Protective headband worn continuously." },
-      { period: "Week 1", description: "Sutures dissolve. Resume light activities. Wear headband at night." },
-      { period: "Week 2–4", description: "Normal activities resume. Protective headband worn only at night." },
+      { period: "Week 1", description: "Sutures dissolve. Resume light activities." },
+      { period: "Week 2–4", description: "Normal activities resume. Wear headband at night." },
     ],
-    results: "Naturally shaped, symmetrical ears with scars hidden behind the ear. Results are permanent. Very high patient satisfaction.",
-    safetyNotes: "A gentle procedure with high patient satisfaction. Safe for both children and adults. Careful technique preserves hearing and ear function.",
+    results: "Naturally shaped, symmetrical ears with scars hidden behind the ear. Results are permanent.",
+    safetyNotes: "A gentle procedure with high patient satisfaction. Safe for both children and adults.",
     faqs: [
       { question: "At what age can children have otoplasty?", answer: "Children as young as 5 years old can have otoplasty, as ear cartilage is sufficiently developed by this age." },
       { question: "Will otoplasty leave visible scars?", answer: "No. Incisions are made behind the ear and become virtually invisible." },
-      { question: "Can otoplasty be combined with other procedures?", answer: "Yes. Adults often combine it with other facial procedures like rhinoplasty or face lift." },
     ],
     heroImage: "/images/svc-ear-reshaping.jpg",
     seoTitle: "Ear Reshaping (Otoplasty) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert otoplasty in Haldwani. Correct prominent or misshapen ears with Dr. Sarika Gangwar.",
+    seoDescription: "Expert otoplasty in Haldwani, Uttarakhand. Correct prominent or misshapen ears with Dr. Sarika Gangwar.",
     relatedServices: ["rhinoplasty", "face-lift", "chin-correction"],
   },
 
-  /* ==================== BREAST (8 SERVICES) ==================== */
+  /* ==================== BREAST ==================== */
   {
     title: "Breast Augmentation",
     slug: "breast-augmentation",
     category: "Breast",
-    shortDescription: "Enhance breast size and shape with implants or fat transfer for natural, proportionate results.",
-    overview: "Breast augmentation enhances the size, shape, and symmetry of the breasts using silicone or saline implants, or autologous fat transfer. Dr. Sarika Gangwar tailors implant type, size, and placement to each patient's body frame and aesthetic goals, ensuring results that look and feel natural. This is the most popular cosmetic procedure worldwide.",
-    whyNeeded: "Many women feel self-conscious about naturally small breasts, asymmetry, or volume loss after pregnancy and breastfeeding. Breast augmentation restores or creates fuller, proportionate breasts that enhance confidence and body image. Results can be life-changing.",
-    eligibility: ["Women 18+ (saline implants) or 22+ (silicone implants)", "Good overall health", "Not currently pregnant or breastfeeding", "Breasts are fully developed", "Realistic expectations about outcomes"],
+    shortDescription:
+      "Enhance breast size and shape with implants or fat transfer for natural, proportionate results.",
+    overview:
+      "Breast augmentation enhances the size, shape, and symmetry of the breasts using silicone or saline implants, or autologous fat transfer. Dr. Sarika Gangwar tailors implant type, size, and placement to each patient's body frame and aesthetic goals, ensuring results that look and feel natural.",
+    whyNeeded:
+      "Many women feel self-conscious about naturally small breasts, asymmetry, or volume loss after pregnancy and breastfeeding. Breast augmentation restores or creates fuller, proportionate breasts that enhance confidence and body image.",
+    eligibility: [
+      "Women 18+ (saline implants) or 22+ (silicone implants)",
+      "Good overall health",
+      "Not currently pregnant or breastfeeding",
+      "Breasts are fully developed",
+      "Realistic expectations about outcomes",
+    ],
     procedureSteps: [
-      { step: 1, title: "Detailed Consultation", description: "Measurement, size simulation, and selection of implant type, shape, and placement. 3D visualization of expected results." },
+      { step: 1, title: "Detailed Consultation", description: "Measurement, size simulation, and selection of implant type, shape, and placement." },
       { step: 2, title: "Anesthesia", description: "General anesthesia for patient safety and comfort." },
-      { step: 3, title: "Incision & Placement", description: "Discreet incision (inframammary, periareolar, or axillary). Implant placed above or below the muscle based on anatomy and preference." },
-      { step: 4, title: "Symmetry & Closure", description: "Final positioning checked for symmetry. Incisions closed in layers for minimal scarring." },
+      { step: 3, title: "Incision & Placement", description: "Discreet incision (inframammary, periareolar, or axillary). Implant placed above or below the muscle." },
+      { step: 4, title: "Symmetry & Closure", description: "Final positioning checked. Incisions closed in layers for minimal scarring." },
     ],
     recoveryTimeline: [
-      { period: "Day 1–3", description: "Surgical bra worn. Mild pain managed with medication. Rest required. Limited arm movement." },
-      { period: "Week 1–2", description: "Return to light activities. Avoid lifting and pushing. Swelling begins to subside." },
-      { period: "Week 4–6", description: "Resume exercise. Implants begin to settle into final position." },
+      { period: "Day 1–3", description: "Surgical bra worn. Mild pain managed with medication. Rest required." },
+      { period: "Week 1–2", description: "Return to light activities. Avoid lifting." },
+      { period: "Week 4–6", description: "Resume exercise. Implants begin to settle." },
       { period: "Month 3–6", description: "Final shape achieved as implants drop and soften." },
     ],
     results: "Fuller, natural-looking breasts with improved symmetry. Modern implants feel soft and natural. Results are long-lasting with proper care.",
@@ -361,19 +410,28 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-breast-augmentation.jpg",
     seoTitle: "Breast Augmentation in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert breast augmentation surgery in Haldwani. Natural-looking breast implants by Dr. Sarika Gangwar. Book consultation.",
+    seoDescription: "Expert breast augmentation surgery in Haldwani, Uttarakhand. Natural-looking breast implants by Dr. Sarika Gangwar. Book consultation today.",
     relatedServices: ["breast-reduction", "breast-lift-mastopexy", "gynecomastia"],
   },
   {
     title: "Breast Reduction",
     slug: "breast-reduction",
     category: "Breast",
-    shortDescription: "Relieve discomfort and achieve a proportionate bust with breast reduction surgery.",
-    overview: "Breast reduction (reduction mammaplasty) removes excess breast tissue, fat, and skin to achieve a breast size proportionate to the body. Dr. Sarika Gangwar uses advanced techniques that minimize scarring while providing relief from physical discomfort caused by overly large breasts. This procedure often has significant medical benefits.",
-    whyNeeded: "Excessively large breasts cause chronic neck pain, back pain, skin irritation, and difficulty exercising. Beyond physical discomfort, they can cause emotional distress and limit clothing options. Breast reduction provides immediate and lasting relief.",
-    eligibility: ["Women experiencing physical symptoms from large breasts", "Breasts are fully developed", "Non-smokers", "Good overall health", "No plans for future pregnancy (which may alter results)"],
+    shortDescription:
+      "Relieve discomfort and achieve a proportionate bust with breast reduction surgery.",
+    overview:
+      "Breast reduction (reduction mammaplasty) removes excess breast tissue, fat, and skin to achieve a breast size proportionate to the body. Dr. Sarika Gangwar uses advanced techniques that minimize scarring while providing relief from physical discomfort caused by overly large breasts.",
+    whyNeeded:
+      "Excessively large breasts cause chronic neck pain, back pain, skin irritation, and difficulty exercising. Beyond physical discomfort, they can cause emotional distress and limit clothing options. Breast reduction provides immediate and lasting relief.",
+    eligibility: [
+      "Women experiencing physical symptoms from large breasts",
+      "Breasts are fully developed",
+      "Non-smokers",
+      "Good overall health",
+      "No plans for future pregnancy (which may alter results)",
+    ],
     procedureSteps: [
-      { step: 1, title: "Assessment", description: "Evaluation of breast size, symptoms, and desired outcome. Surgical plan marked on the skin." },
+      { step: 1, title: "Assessment", description: "Evaluation of breast size, symptoms, and desired outcome. Surgical plan marked." },
       { step: 2, title: "Anesthesia", description: "General anesthesia administered." },
       { step: 3, title: "Tissue Removal & Reshaping", description: "Excess tissue, fat, and skin removed. Breast reshaped with lifted nipple position." },
       { step: 4, title: "Closure", description: "Layered closure with drain placement if needed." },
@@ -393,17 +451,26 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-breast-reduction.jpg",
     seoTitle: "Breast Reduction Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert breast reduction in Haldwani. Relief from back pain with proportionate results. Consult Dr. Sarika Gangwar.",
+    seoDescription: "Expert breast reduction in Haldwani, Uttarakhand. Relief from back pain with proportionate results. Consult Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-lift-mastopexy", "liposuction"],
   },
   {
     title: "Breast Lift (Mastopexy)",
     slug: "breast-lift-mastopexy",
     category: "Breast",
-    shortDescription: "Restore youthful breast shape and position with a breast lift that combats sagging.",
-    overview: "A breast lift (mastopexy) raises and reshapes sagging breasts by removing excess skin and tightening surrounding tissue. Dr. Sarika Gangwar repositions the nipple-areola complex to a youthful height and creates a firmer, perkier breast contour — restoring confidence and comfort.",
-    whyNeeded: "Pregnancy, breastfeeding, weight fluctuations, aging, and gravity cause breasts to lose their youthful shape and firmness. A breast lift addresses sagging (ptosis) that no exercise or bra can correct, restoring a lifted, natural breast profile.",
-    eligibility: ["Women with breast sagging (ptosis grade II or III)", "Completed pregnancies (recommended but not required)", "Stable weight", "Good overall health", "Non-smokers"],
+    shortDescription:
+      "Restore youthful breast shape and position with a breast lift that combats sagging.",
+    overview:
+      "A breast lift (mastopexy) raises and reshapes sagging breasts by removing excess skin and tightening surrounding tissue. Dr. Sarika Gangwar repositions the nipple-areola complex to a youthful height and creates a firmer, perkier breast contour — restoring confidence and comfort.",
+    whyNeeded:
+      "Pregnancy, breastfeeding, weight fluctuations, aging, and gravity cause breasts to lose their youthful shape and firmness. A breast lift addresses sagging (ptosis) that no exercise or bra can correct, restoring a lifted, natural breast profile.",
+    eligibility: [
+      "Women with breast sagging (ptosis grade II or III)",
+      "Completed pregnancies (recommended but not required)",
+      "Stable weight",
+      "Good overall health",
+      "Non-smokers",
+    ],
     procedureSteps: [
       { step: 1, title: "Consultation & Marking", description: "Assessment of ptosis grade. Surgical plan marked on the skin for precision." },
       { step: 2, title: "Anesthesia", description: "General anesthesia for patient comfort." },
@@ -425,17 +492,25 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-breast-lift.jpg",
     seoTitle: "Breast Lift (Mastopexy) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best breast lift surgery in Haldwani. Correct sagging breasts with mastopexy by Dr. Sarika Gangwar.",
+    seoDescription: "Best breast lift surgery in Haldwani, Uttarakhand. Correct sagging breasts with mastopexy by Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-reduction", "tummy-tuck"],
   },
   {
     title: "Gynecomastia",
     slug: "gynecomastia",
     category: "Breast",
-    shortDescription: "Eliminate enlarged male breasts and restore a flat, masculine chest contour.",
-    overview: "Gynecomastia surgery treats enlarged male breast tissue — a condition that affects up to 60% of men. Dr. Sarika Gangwar uses a combination of liposuction and gland excision to create a flat, masculine chest contour with minimal scarring, restoring confidence and comfort.",
-    whyNeeded: "Enlarged breast tissue in men (gynecomastia) can be caused by hormonal changes, medications, or genetics. It causes significant embarrassment and limits activities like swimming or wearing fitted clothing. Surgery provides a permanent solution when exercise and diet fail.",
-    eligibility: ["Men with persistent breast enlargement unresponsive to other treatments", "Stable weight", "Good overall health", "Hormonal evaluation completed"],
+    shortDescription:
+      "Eliminate enlarged male breasts and restore a flat, masculine chest contour.",
+    overview:
+      "Gynecomastia surgery treats enlarged male breast tissue — a condition that affects up to 60% of men. Dr. Sarika Gangwar uses a combination of liposuction and gland excision to create a flat, masculine chest contour with minimal scarring, restoring confidence and comfort.",
+    whyNeeded:
+      "Enlarged breast tissue in men (gynecomastia) can be caused by hormonal changes, medications, or genetics. It causes significant embarrassment and limits activities like swimming or wearing fitted clothing. Surgery provides a permanent solution when exercise and diet fail.",
+    eligibility: [
+      "Men with persistent breast enlargement unresponsive to other treatments",
+      "Stable weight",
+      "Good overall health",
+      "Hormonal evaluation completed",
+    ],
     procedureSteps: [
       { step: 1, title: "Evaluation", description: "Physical exam, hormonal screening, and imaging to assess gland vs. fat composition." },
       { step: 2, title: "Anesthesia", description: "General or local anesthesia with sedation." },
@@ -458,17 +533,24 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-gynecomastia.jpg",
     seoTitle: "Gynecomastia Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best gynecomastia surgery in Haldwani. Male breast reduction by Dr. Sarika Gangwar. Flat chest.",
+    seoDescription: "Best gynecomastia surgery in Haldwani, Uttarakhand. Male breast reduction by Dr. Sarika Gangwar. Flat, masculine chest. Book consultation.",
     relatedServices: ["liposuction", "breast-reduction", "abdominal-etching"],
   },
   {
     title: "Nipple & Areola Correction",
     slug: "nipple-areola-correction",
     category: "Breast",
-    shortDescription: "Correct inverted nipples, enlarged areolas, or asymmetry for improved breast aesthetics.",
-    overview: "Nipple and areola correction addresses inverted nipples, enlarged areolas, or asymmetry through precise surgical techniques. Dr. Sarika Gangwar performs these procedures with attention to symmetry and natural appearance, often as standalone procedures or combined with breast surgery.",
-    whyNeeded: "Inverted nipples can affect breastfeeding ability and cause self-consciousness. Enlarged or asymmetric areolas may result from genetics, pregnancy, or previous surgery. Correction improves breast aesthetics and function.",
-    eligibility: ["Adults with nipple or areola concerns", "Good breast and overall health", "Not currently breastfeeding"],
+    shortDescription:
+      "Correct inverted nipples, enlarged areolas, or asymmetry for improved breast aesthetics.",
+    overview:
+      "Nipple and areola correction addresses inverted nipples, enlarged areolas, or asymmetry through precise surgical techniques. Dr. Sarika Gangwar performs these procedures with attention to symmetry and natural appearance, often as standalone procedures or combined with breast surgery.",
+    whyNeeded:
+      "Inverted nipples can affect breastfeeding ability and cause self-consciousness. Enlarged or asymmetric areolas may result from genetics, pregnancy, or previous surgery. Correction improves breast aesthetics and function.",
+    eligibility: [
+      "Adults with nipple or areola concerns",
+      "Good breast and overall health",
+      "Not currently breastfeeding",
+    ],
     procedureSteps: [
       { step: 1, title: "Assessment", description: "Evaluation of nipple/areola concerns and surgical planning." },
       { step: 2, title: "Local Anesthesia", description: "Local anesthesia for patient comfort." },
@@ -488,19 +570,28 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-nipple-areola.jpg",
     seoTitle: "Nipple & Areola Correction in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert nipple and areola correction in Haldwani. Fix inverted nipples and areola concerns with Dr. Sarika Gangwar.",
+    seoDescription: "Expert nipple and areola correction in Haldwani, Uttarakhand. Fix inverted nipples and areola concerns with Dr. Sarika Gangwar.",
     relatedServices: ["breast-augmentation", "breast-lift-mastopexy", "breast-reduction"],
   },
 
-  /* ==================== BODY (6 SERVICES) ==================== */
+  /* ==================== BODY ==================== */
   {
     title: "Liposuction",
     slug: "liposuction",
     category: "Body",
-    shortDescription: "Remove stubborn fat deposits and sculpt your body contours with advanced liposuction techniques.",
-    overview: "Liposuction is the most popular body contouring procedure worldwide. Dr. Sarika Gangwar uses advanced power-assisted and tumescent liposuction techniques to permanently remove stubborn fat deposits from the abdomen, thighs, flanks, arms, chin, and more — sculpting a slimmer, more defined body contour.",
-    whyNeeded: "Diet and exercise cannot always eliminate localized fat deposits caused by genetics. Liposuction precisely targets these resistant pockets, sculpting the body into a more proportionate and defined shape. It is not a weight-loss procedure but a body-shaping tool.",
-    eligibility: ["Adults within 20–30% of ideal body weight", "Firm, elastic skin for best results", "Good overall health", "Non-smokers", "Stable weight for at least 6 months"],
+    shortDescription:
+      "Remove stubborn fat deposits and sculpt your body contours with advanced liposuction techniques.",
+    overview:
+      "Liposuction is the most popular body contouring procedure worldwide. Dr. Sarika Gangwar uses advanced power-assisted and tumescent liposuction techniques to permanently remove stubborn fat deposits from the abdomen, thighs, flanks, arms, chin, and more — sculpting a slimmer, more defined body contour.",
+    whyNeeded:
+      "Diet and exercise cannot always eliminate localized fat deposits caused by genetics. Liposuction precisely targets these resistant pockets, sculpting the body into a more proportionate and defined shape. It is not a weight-loss procedure but a body-shaping tool.",
+    eligibility: [
+      "Adults within 20–30% of ideal body weight",
+      "Firm, elastic skin for best results",
+      "Good overall health",
+      "Non-smokers",
+      "Stable weight for at least 6 months",
+    ],
     procedureSteps: [
       { step: 1, title: "Body Assessment", description: "Detailed analysis of fat distribution, skin quality, and body proportions." },
       { step: 2, title: "Tumescent Infusion", description: "Tumescent fluid injected to minimize bleeding and ease fat removal." },
@@ -520,20 +611,30 @@ export const services: Service[] = [
       { question: "Is liposuction a weight loss procedure?", answer: "No. Liposuction is a body contouring procedure best for removing localized fat deposits, not for significant weight loss." },
       { question: "Will fat come back after liposuction?", answer: "Fat cells removed by liposuction do not return. However, remaining cells can enlarge with significant weight gain." },
       { question: "How many areas can be treated at once?", answer: "Multiple areas can be treated in a single session, depending on the total volume and patient safety considerations." },
+      { question: "What areas can be treated?", answer: "Common areas include abdomen, flanks (love handles), thighs, arms, chin, back, and male chest." },
     ],
     heroImage: "/images/svc-liposuction.jpg",
     seoTitle: "Liposuction in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best liposuction surgery in Haldwani. Advanced body contouring by Dr. Sarika Gangwar. Remove stubborn fat.",
+    seoDescription: "Best liposuction surgery in Haldwani, Uttarakhand. Advanced body contouring by Dr. Sarika Gangwar. Remove stubborn fat. Book now.",
     relatedServices: ["tummy-tuck", "body-lift", "abdominal-etching"],
   },
   {
     title: "Tummy Tuck",
     slug: "tummy-tuck",
     category: "Body",
-    shortDescription: "Flatten and tighten your abdomen by removing excess skin and repairing weakened muscles.",
-    overview: "A tummy tuck (abdominoplasty) removes excess abdominal skin and fat while repairing separated or weakened abdominal muscles. Dr. Sarika Gangwar performs both full and mini tummy tucks, customizing the approach to each patient's anatomy for a flatter, more toned midsection.",
-    whyNeeded: "Pregnancy, significant weight loss, and aging can leave excess abdominal skin, stretch marks, and weakened muscles that no amount of exercise can correct. A tummy tuck addresses all these concerns in one procedure, restoring a firm, flat abdomen.",
-    eligibility: ["Adults with excess abdominal skin or muscle laxity", "Stable weight (not planning significant weight loss)", "Completed pregnancies (recommended)", "Non-smokers", "Good overall health"],
+    shortDescription:
+      "Flatten and tighten your abdomen by removing excess skin and repairing weakened muscles.",
+    overview:
+      "A tummy tuck (abdominoplasty) removes excess abdominal skin and fat while repairing separated or weakened abdominal muscles. Dr. Sarika Gangwar performs both full and mini tummy tucks, customizing the approach to each patient's anatomy for a flatter, more toned midsection.",
+    whyNeeded:
+      "Pregnancy, significant weight loss, and aging can leave excess abdominal skin, stretch marks, and weakened muscles that no amount of exercise can correct. A tummy tuck addresses all these concerns in one procedure, restoring a firm, flat abdomen.",
+    eligibility: [
+      "Adults with excess abdominal skin or muscle laxity",
+      "Stable weight (not planning significant weight loss)",
+      "Completed pregnancies (recommended)",
+      "Non-smokers",
+      "Good overall health",
+    ],
     procedureSteps: [
       { step: 1, title: "Consultation", description: "Assessment of skin excess, muscle separation, and surgical planning." },
       { step: 2, title: "Anesthesia", description: "General anesthesia administered." },
@@ -556,17 +657,26 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-tummy-tuck.jpg",
     seoTitle: "Tummy Tuck (Abdominoplasty) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert tummy tuck surgery in Haldwani. Flat, toned abdomen by Dr. Sarika Gangwar. Book consultation.",
+    seoDescription: "Expert tummy tuck surgery in Haldwani, Uttarakhand. Flat, toned abdomen by Dr. Sarika Gangwar. Book consultation.",
     relatedServices: ["liposuction", "mommy-makeover", "body-lift"],
   },
   {
     title: "Mommy Makeover",
     slug: "mommy-makeover",
     category: "Body",
-    shortDescription: "Restore your pre-pregnancy body with a customized combination of breast and body procedures.",
-    overview: "A mommy makeover is a personalized combination of procedures designed to restore a woman's body after pregnancy and breastfeeding. Dr. Sarika Gangwar typically combines a tummy tuck, breast lift or augmentation, and liposuction into one surgical session — reducing overall recovery time and cost.",
-    whyNeeded: "Pregnancy and breastfeeding cause significant changes to the breasts and abdomen — sagging, volume loss, stretch marks, and weakened muscles. A mommy makeover addresses multiple concerns simultaneously, restoring your pre-pregnancy confidence.",
-    eligibility: ["Women who have completed their families", "At least 6 months postpartum", "Finished breastfeeding for at least 3 months", "Stable weight", "Good overall health and non-smoker"],
+    shortDescription:
+      "Restore your pre-pregnancy body with a customized combination of breast and body procedures.",
+    overview:
+      "A mommy makeover is a personalized combination of procedures designed to restore a woman's body after pregnancy and breastfeeding. Dr. Sarika Gangwar typically combines a tummy tuck, breast lift or augmentation, and liposuction into one surgical session — reducing overall recovery time and cost.",
+    whyNeeded:
+      "Pregnancy and breastfeeding cause significant changes to the breasts and abdomen — sagging, volume loss, stretch marks, and weakened muscles. A mommy makeover addresses multiple concerns simultaneously, restoring your pre-pregnancy confidence.",
+    eligibility: [
+      "Women who have completed their families",
+      "At least 6 months postpartum",
+      "Finished breastfeeding for at least 3 months",
+      "Stable weight",
+      "Good overall health and non-smoker",
+    ],
     procedureSteps: [
       { step: 1, title: "Personalized Plan", description: "Detailed assessment of all concerns. Custom combination of procedures designed." },
       { step: 2, title: "Anesthesia", description: "General anesthesia for the combined procedure." },
@@ -589,17 +699,26 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-mommy-makeover.jpg",
     seoTitle: "Mommy Makeover in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Comprehensive mommy makeover in Haldwani. Restore your body after pregnancy. Dr. Sarika Gangwar.",
+    seoDescription: "Comprehensive mommy makeover in Haldwani, Uttarakhand. Restore your body after pregnancy. Dr. Sarika Gangwar. Book consultation.",
     relatedServices: ["tummy-tuck", "breast-lift-mastopexy", "liposuction"],
   },
   {
     title: "Body Lift",
     slug: "body-lift",
     category: "Body",
-    shortDescription: "Remove excess sagging skin from the abdomen, thighs, and buttocks after major weight loss.",
-    overview: "A body lift removes excess skin and tissue from the abdomen, buttocks, thighs, and flanks — often after significant weight loss. Dr. Sarika Gangwar performs circumferential and lower body lifts to create a smoother, more contoured body silhouette when massive weight loss leaves behind loose, hanging skin.",
-    whyNeeded: "After significant weight loss (from bariatric surgery or lifestyle changes), patients are often left with excess skin that causes hygiene issues, skin irritation, and severely impacts quality of life. A body lift removes this excess and completes the weight loss transformation.",
-    eligibility: ["Adults with significant excess skin after weight loss", "Weight stable for at least 6–12 months", "BMI ideally under 32", "Good nutritional status", "Non-smokers"],
+    shortDescription:
+      "Remove excess sagging skin from the abdomen, thighs, and buttocks after major weight loss.",
+    overview:
+      "A body lift removes excess skin and tissue from the abdomen, buttocks, thighs, and flanks — often after significant weight loss. Dr. Sarika Gangwar performs circumferential and lower body lifts to create a smoother, more contoured body silhouette when massive weight loss leaves behind loose, hanging skin.",
+    whyNeeded:
+      "After significant weight loss (from bariatric surgery or lifestyle changes), patients are often left with excess skin that causes hygiene issues, skin irritation, and severely impacts quality of life. A body lift removes this excess and completes the weight loss transformation.",
+    eligibility: [
+      "Adults with significant excess skin after weight loss",
+      "Weight stable for at least 6–12 months",
+      "BMI ideally under 32",
+      "Good nutritional status",
+      "Non-smokers",
+    ],
     procedureSteps: [
       { step: 1, title: "Comprehensive Assessment", description: "Full-body evaluation of skin excess. Multi-area surgical plan created." },
       { step: 2, title: "Anesthesia", description: "General anesthesia for this extensive procedure." },
@@ -622,17 +741,26 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-body-lift.jpg",
     seoTitle: "Body Lift Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert body lift after weight loss in Haldwani. Remove excess skin with Dr. Sarika Gangwar.",
+    seoDescription: "Expert body lift after weight loss in Haldwani, Uttarakhand. Remove excess skin with Dr. Sarika Gangwar. Transform your body.",
     relatedServices: ["tummy-tuck", "liposuction", "mommy-makeover"],
   },
   {
     title: "Abdominal Etching",
     slug: "abdominal-etching",
     category: "Body",
-    shortDescription: "Sculpt visible six-pack abs through precision liposuction — the athletic body you've always wanted.",
-    overview: "Abdominal etching is a specialized form of high-definition liposuction that sculpts visible abdominal muscle definition — creating the appearance of a six-pack. Dr. Sarika Gangwar uses precise fat removal along the natural muscle lines to reveal athletic contours that diet and exercise alone may not achieve.",
-    whyNeeded: "Even with low body fat and regular exercise, many people cannot achieve visible abdominal muscle definition due to genetics. Abdominal etching selectively removes fat overlying the muscle borders, creating natural-looking athletic contours.",
-    eligibility: ["Fit individuals near ideal body weight", "Good skin elasticity", "Existing muscle development underneath", "Realistic expectations", "Non-smokers"],
+    shortDescription:
+      "Sculpt visible six-pack abs through precision liposuction — the athletic body you've always wanted.",
+    overview:
+      "Abdominal etching is a specialized form of high-definition liposuction that sculpts visible abdominal muscle definition — creating the appearance of a six-pack. Dr. Sarika Gangwar uses precise fat removal along the natural muscle lines to reveal athletic contours that diet and exercise alone may not achieve.",
+    whyNeeded:
+      "Even with low body fat and regular exercise, many people cannot achieve visible abdominal muscle definition due to genetics. Abdominal etching selectively removes fat overlying the muscle borders, creating natural-looking athletic contours.",
+    eligibility: [
+      "Fit individuals near ideal body weight",
+      "Good skin elasticity",
+      "Existing muscle development underneath",
+      "Realistic expectations",
+      "Non-smokers",
+    ],
     procedureSteps: [
       { step: 1, title: "Body Analysis", description: "Assessment of muscle anatomy, fat distribution, and desired definition level." },
       { step: 2, title: "Muscle Mapping", description: "Natural abdominal muscle lines marked while patient flexes." },
@@ -649,23 +777,31 @@ export const services: Service[] = [
     safetyNotes: "Requires precise technique to avoid irregularities. Dr. Gangwar's experience ensures smooth, symmetric results.",
     faqs: [
       { question: "Do I need to be fit for abdominal etching?", answer: "Yes. Best results are achieved in patients who are already fit with some muscle development. This is a sculpting procedure, not weight loss." },
-      { question: "Will the abs look natural?", answer: "Absolutely. The sculpting follows your actual muscle anatomy, so results look completely natural." },
+      { question: "Will the abs look natural?", answer: "Absolutely. The sculpting follows your actual muscle anatomy, so results look completely natural — like you achieved them through training." },
     ],
     heroImage: "/images/svc-abdominal-etching.jpg",
     seoTitle: "Abdominal Etching in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Six-pack sculpting with abdominal etching in Haldwani. HD liposuction by Dr. Sarika Gangwar.",
+    seoDescription: "Six-pack sculpting with abdominal etching in Haldwani. HD liposuction by Dr. Sarika Gangwar for athletic body contours.",
     relatedServices: ["liposuction", "tummy-tuck", "gynecomastia"],
   },
 
-  /* ==================== GENITALS (3 SERVICES) ==================== */
+  /* ==================== GENITALS ==================== */
   {
     title: "Vaginal Tightening",
     slug: "vaginal-tightening",
     category: "Genitals",
-    shortDescription: "Restore vaginal tone and confidence with expert vaginoplasty in a safe, private setting.",
-    overview: "Vaginal tightening (vaginoplasty) is a surgical procedure that tightens the vaginal canal and surrounding muscles. Dr. Sarika Gangwar performs this procedure with the highest standards of privacy, safety, and care — helping women regain comfort and confidence after childbirth or with aging.",
-    whyNeeded: "Vaginal laxity from childbirth or aging can affect physical comfort and confidence. Vaginoplasty tightens the vaginal canal and muscles, addressing both functional and aesthetic concerns in a safe, confidential setting.",
-    eligibility: ["Women experiencing vaginal laxity", "Completed childbirths (recommended)", "Good pelvic health", "No active infections"],
+    shortDescription:
+      "Restore vaginal tone and confidence with expert vaginoplasty in a safe, private setting.",
+    overview:
+      "Vaginal tightening (vaginoplasty) is a surgical procedure that tightens the vaginal canal and surrounding muscles. Dr. Sarika Gangwar performs this procedure with the highest standards of privacy, safety, and care — helping women regain comfort and confidence after childbirth or with aging.",
+    whyNeeded:
+      "Vaginal laxity from childbirth or aging can affect physical comfort and confidence. Vaginoplasty tightens the vaginal canal and muscles, addressing both functional and aesthetic concerns in a safe, confidential setting.",
+    eligibility: [
+      "Women experiencing vaginal laxity",
+      "Completed childbirths (recommended)",
+      "Good pelvic health",
+      "No active infections",
+    ],
     procedureSteps: [
       { step: 1, title: "Private Consultation", description: "Confidential assessment and discussion of concerns and goals." },
       { step: 2, title: "Anesthesia", description: "General or regional anesthesia." },
@@ -685,17 +821,25 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-vaginal-tightening.jpg",
     seoTitle: "Vaginal Tightening in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Confidential vaginal tightening surgery in Haldwani. Expert vaginoplasty by Dr. Sarika Gangwar.",
+    seoDescription: "Confidential vaginal tightening surgery in Haldwani, Uttarakhand. Expert vaginoplasty by Dr. Sarika Gangwar.",
     relatedServices: ["hymenoplasty", "mommy-makeover", "tummy-tuck"],
   },
   {
     title: "Hymenoplasty",
     slug: "hymenoplasty",
     category: "Genitals",
-    shortDescription: "Hymen restoration performed with utmost privacy, care, and surgical precision.",
-    overview: "Hymenoplasty is a surgical procedure to repair or reconstruct the hymen. Dr. Sarika Gangwar performs this delicate procedure with the highest level of privacy, discretion, and surgical expertise, ensuring patient comfort throughout the process.",
-    whyNeeded: "Women seek hymenoplasty for personal, cultural, or psychological reasons. Regardless of the motivation, every patient is treated with respect, confidentiality, and non-judgmental care.",
-    eligibility: ["Adult women seeking the procedure", "Good pelvic health", "No active infections", "Consultation to discuss expectations"],
+    shortDescription:
+      "Hymen restoration performed with utmost privacy, care, and surgical precision.",
+    overview:
+      "Hymenoplasty is a surgical procedure to repair or reconstruct the hymen. Dr. Sarika Gangwar performs this delicate procedure with the highest level of privacy, discretion, and surgical expertise, ensuring patient comfort throughout the process.",
+    whyNeeded:
+      "Women seek hymenoplasty for personal, cultural, or psychological reasons. Regardless of the motivation, every patient is treated with respect, confidentiality, and non-judgmental care.",
+    eligibility: [
+      "Adult women seeking the procedure",
+      "Good pelvic health",
+      "No active infections",
+      "Consultation to discuss expectations",
+    ],
     procedureSteps: [
       { step: 1, title: "Confidential Consultation", description: "Private discussion of concerns, expectations, and procedure details." },
       { step: 2, title: "Local Anesthesia", description: "Local anesthesia for patient comfort." },
@@ -715,17 +859,25 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-hymenoplasty.jpg",
     seoTitle: "Hymenoplasty in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Confidential hymenoplasty in Haldwani. Expert hymen restoration by Dr. Sarika Gangwar.",
+    seoDescription: "Confidential hymenoplasty in Haldwani, Uttarakhand. Expert hymen restoration by Dr. Sarika Gangwar.",
     relatedServices: ["vaginal-tightening", "mommy-makeover"],
   },
   {
     title: "Male Genital Procedures",
     slug: "male-genital-procedures",
     category: "Genitals",
-    shortDescription: "Confidential male genital surgical procedures performed with expert care and precision.",
-    overview: "Dr. Sarika Gangwar offers a range of male genital surgical procedures including penile enhancement, correction of congenital abnormalities, and reconstructive surgery. All procedures are performed with the highest level of confidentiality and surgical expertise.",
-    whyNeeded: "Male genital concerns — whether cosmetic, functional, or congenital — can significantly impact quality of life and confidence. Expert surgical intervention addresses these concerns safely and effectively.",
-    eligibility: ["Adult men with specific genital concerns", "Good overall health", "Consultation to discuss individual needs", "Realistic expectations"],
+    shortDescription:
+      "Confidential male genital surgical procedures performed with expert care and precision.",
+    overview:
+      "Dr. Sarika Gangwar offers a range of male genital surgical procedures including penile enhancement, correction of congenital abnormalities, and reconstructive surgery. All procedures are performed with the highest level of confidentiality and surgical expertise.",
+    whyNeeded:
+      "Male genital concerns — whether cosmetic, functional, or congenital — can significantly impact quality of life and confidence. Expert surgical intervention addresses these concerns safely and effectively.",
+    eligibility: [
+      "Adult men with specific genital concerns",
+      "Good overall health",
+      "Consultation to discuss individual needs",
+      "Realistic expectations",
+    ],
     procedureSteps: [
       { step: 1, title: "Private Consultation", description: "Confidential discussion of concerns and surgical options." },
       { step: 2, title: "Evaluation", description: "Physical examination and surgical planning." },
@@ -745,19 +897,29 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-male-genital.jpg",
     seoTitle: "Male Genital Procedures in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Confidential male genital surgery in Haldwani by Dr. Sarika Gangwar. Expert care.",
+    seoDescription: "Confidential male genital surgery in Haldwani, Uttarakhand by Dr. Sarika Gangwar. Expert care and precision.",
     relatedServices: ["gynecomastia", "liposuction"],
   },
+ 
 
-  /* ==================== HAIR & SKIN (4 SERVICES) ==================== */
+  /* ==================== HAIR & SKIN ==================== */
   {
     title: "Hair Transplant",
     slug: "hair-transplant",
     category: "Hair & Skin",
-    shortDescription: "Restore natural hair growth with advanced FUE and FUT hair transplant techniques.",
-    overview: "Hair transplant surgery restores natural hair growth in areas affected by hair loss or baldness. Dr. Sarika Gangwar performs both FUE (Follicular Unit Extraction) and FUT (Follicular Unit Transplantation) techniques, choosing the optimal approach based on each patient's hair loss pattern, donor area, and goals.",
-    whyNeeded: "Hair loss affects self-confidence and can impact social and professional life. Modern hair transplant techniques offer permanent, natural-looking results by redistributing your own healthy hair follicles to thinning or bald areas.",
-    eligibility: ["Men and women with pattern hair loss", "Sufficient donor hair density", "Age 25+ (hair loss pattern should be established)", "Good overall health", "Realistic expectations about density and coverage"],
+    shortDescription:
+      "Restore natural hair growth with advanced FUE and FUT hair transplant techniques.",
+    overview:
+      "Hair transplant surgery restores natural hair growth in areas affected by hair loss or baldness. Dr. Sarika Gangwar performs both FUE (Follicular Unit Extraction) and FUT (Follicular Unit Transplantation) techniques, choosing the optimal approach based on each patient's hair loss pattern, donor area, and goals.",
+    whyNeeded:
+      "Hair loss affects self-confidence and can impact social and professional life. Modern hair transplant techniques offer permanent, natural-looking results by redistributing your own healthy hair follicles to thinning or bald areas.",
+    eligibility: [
+      "Men and women with pattern hair loss",
+      "Sufficient donor hair density",
+      "Age 25+ (hair loss pattern should be established)",
+      "Good overall health",
+      "Realistic expectations about density and coverage",
+    ],
     procedureSteps: [
       { step: 1, title: "Hair Analysis", description: "Assessment of hair loss pattern, donor area, and graft count planning." },
       { step: 2, title: "Local Anesthesia", description: "Scalp numbed for a comfortable, pain-free experience." },
@@ -777,20 +939,29 @@ export const services: Service[] = [
       { question: "FUE or FUT — which is better?", answer: "Both techniques have advantages. FUE leaves no linear scar and is preferred for short hairstyles. FUT may yield more grafts per session. Dr. Gangwar recommends based on your specific needs." },
       { question: "Is hair transplant permanent?", answer: "Yes. Transplanted hair follicles are resistant to the hormone that causes hair loss and will grow permanently." },
       { question: "When will I see results?", answer: "New growth starts at 3–4 months, with full results visible at 8–12 months. Patience is key — the wait is worth it." },
+      { question: "How many grafts will I need?", answer: "This depends on the area of hair loss and desired density. Typically 1,500–4,000 grafts per session." },
     ],
     heroImage: "/images/svc-hair-transplant.jpg",
     seoTitle: "Hair Transplant in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best hair transplant in Haldwani. FUE & FUT techniques by Dr. Sarika Gangwar. Natural results.",
+    seoDescription: "Best hair transplant in Haldwani, Uttarakhand. FUE & FUT techniques by Dr. Sarika Gangwar. Natural results. Book consultation.",
     relatedServices: ["scar-removal", "vitiligo-surgery", "mole-wart-removal"],
   },
   {
     title: "Scar Removal",
     slug: "scar-removal",
     category: "Hair & Skin",
-    shortDescription: "Minimize or eliminate scars from surgery, injury, acne, or burns with expert scar revision.",
-    overview: "Scar removal and revision surgery improves the appearance of scars from injuries, burns, surgery, or acne. Dr. Sarika Gangwar uses a combination of surgical excision, laser therapy, dermabrasion, and tissue rearrangement to minimize scars and restore smooth skin texture.",
-    whyNeeded: "Visible scars can affect self-confidence and be a constant reminder of trauma. Scar revision techniques can significantly improve the appearance, texture, and color of scars, making them less noticeable or virtually invisible.",
-    eligibility: ["Anyone with bothersome scars", "Scars at least 6–12 months old (fully matured)", "Good overall health", "No active skin infections in the scar area"],
+    shortDescription:
+      "Minimize or eliminate scars from surgery, injury, acne, or burns with expert scar revision.",
+    overview:
+      "Scar removal and revision surgery improves the appearance of scars from injuries, burns, surgery, or acne. Dr. Sarika Gangwar uses a combination of surgical excision, laser therapy, dermabrasion, and tissue rearrangement to minimize scars and restore smooth skin texture.",
+    whyNeeded:
+      "Visible scars can affect self-confidence and be a constant reminder of trauma. Scar revision techniques can significantly improve the appearance, texture, and color of scars, making them less noticeable or virtually invisible.",
+    eligibility: [
+      "Anyone with bothersome scars",
+      "Scars at least 6–12 months old (fully matured)",
+      "Good overall health",
+      "No active skin infections in the scar area",
+    ],
     procedureSteps: [
       { step: 1, title: "Scar Assessment", description: "Evaluation of scar type, size, location, and treatment options." },
       { step: 2, title: "Treatment Selection", description: "Custom treatment plan — surgical, laser, or combination approach." },
@@ -811,17 +982,26 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-scar-removal.jpg",
     seoTitle: "Scar Removal Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Expert scar removal and revision in Haldwani. Keloid, acne scar, burn scar treatment by Dr. Sarika Gangwar.",
+    seoDescription: "Expert scar removal and revision in Haldwani, Uttarakhand. Keloid, acne scar, burn scar treatment by Dr. Sarika Gangwar.",
     relatedServices: ["vitiligo-surgery", "mole-wart-removal", "hair-transplant"],
   },
   {
     title: "Vitiligo Surgery",
     slug: "vitiligo-surgery",
     category: "Hair & Skin",
-    shortDescription: "Restore natural skin color in stable vitiligo patches with advanced surgical techniques.",
-    overview: "Vitiligo surgery restores natural skin pigmentation in stable vitiligo patches using melanocyte transplantation, punch grafting, or suction blister grafting. Dr. Sarika Gangwar offers these advanced techniques to patients with stable vitiligo who have not responded to medical therapy.",
-    whyNeeded: "Vitiligo causes depigmented patches that significantly impact appearance and self-esteem, especially in Indian skin tones. When medical treatment fails to restore color, surgical techniques can transplant healthy melanocytes to achieve natural repigmentation.",
-    eligibility: ["Stable vitiligo (no new patches for at least 1 year)", "Failed or inadequate response to medical treatment", "No history of koebnerization", "Good overall health", "Non-smoker for optimal graft survival"],
+    shortDescription:
+      "Restore natural skin color in stable vitiligo patches with advanced surgical techniques.",
+    overview:
+      "Vitiligo surgery restores natural skin pigmentation in stable vitiligo patches using melanocyte transplantation, punch grafting, or suction blister grafting. Dr. Sarika Gangwar offers these advanced techniques to patients with stable vitiligo who have not responded to medical therapy.",
+    whyNeeded:
+      "Vitiligo causes depigmented patches that significantly impact appearance and self-esteem, especially in Indian skin tones. When medical treatment fails to restore color, surgical techniques can transplant healthy melanocytes to achieve natural repigmentation.",
+    eligibility: [
+      "Stable vitiligo (no new patches for at least 1 year)",
+      "Failed or inadequate response to medical treatment",
+      "No history of koebnerization",
+      "Good overall health",
+      "Non-smoker for optimal graft survival",
+    ],
     procedureSteps: [
       { step: 1, title: "Assessment", description: "Evaluation of vitiligo stability, patch location, and size. Treatment method selected." },
       { step: 2, title: "Donor Area Preparation", description: "Healthy skin prepared from a concealed donor site." },
@@ -842,17 +1022,24 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-vitiligo.jpg",
     seoTitle: "Vitiligo Surgery in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Advanced vitiligo surgery in Haldwani. Melanocyte transplant for repigmentation by Dr. Sarika Gangwar.",
+    seoDescription: "Advanced vitiligo surgery in Haldwani, Uttarakhand. Melanocyte transplant for repigmentation by Dr. Sarika Gangwar.",
     relatedServices: ["scar-removal", "mole-wart-removal", "hair-transplant"],
   },
   {
     title: "Mole / Wart Removal",
     slug: "mole-wart-removal",
     category: "Hair & Skin",
-    shortDescription: "Safe removal of moles, warts, skin tags, and benign skin lesions with minimal scarring.",
-    overview: "Dr. Sarika Gangwar safely removes moles, warts, skin tags, and other benign skin lesions using surgical excision, radiofrequency, or laser techniques. Each lesion is assessed for safety, and removal is performed with emphasis on minimal scarring and complete excision.",
-    whyNeeded: "Moles and warts can be cosmetically bothersome or cause discomfort. Some lesions may need removal for medical reasons (suspicious changes). Expert removal ensures complete excision with optimal cosmetic outcome and proper pathological examination when needed.",
-    eligibility: ["Anyone with bothersome moles, warts, or skin lesions", "Lesions assessed for any concerning features", "Good overall health"],
+    shortDescription:
+      "Safe removal of moles, warts, skin tags, and benign skin lesions with minimal scarring.",
+    overview:
+      "Dr. Sarika Gangwar safely removes moles, warts, skin tags, and other benign skin lesions using surgical excision, radiofrequency, or laser techniques. Each lesion is assessed for safety, and removal is performed with emphasis on minimal scarring and complete excision.",
+    whyNeeded:
+      "Moles and warts can be cosmetically bothersome or cause discomfort. Some lesions may need removal for medical reasons (suspicious changes). Expert removal ensures complete excision with optimal cosmetic outcome and proper pathological examination when needed.",
+    eligibility: [
+      "Anyone with bothersome moles, warts, or skin lesions",
+      "Lesions assessed for any concerning features",
+      "Good overall health",
+    ],
     procedureSteps: [
       { step: 1, title: "Assessment", description: "Clinical evaluation of the lesion. Dermoscopy if needed." },
       { step: 2, title: "Local Anesthesia", description: "Area numbed for a pain-free procedure." },
@@ -872,14 +1059,14 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-mole-wart.jpg",
     seoTitle: "Mole & Wart Removal in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Safe mole and wart removal in Haldwani. Expert skin lesion treatment by Dr. Sarika Gangwar.",
+    seoDescription: "Safe mole and wart removal in Haldwani, Uttarakhand. Expert skin lesion treatment by Dr. Sarika Gangwar.",
     relatedServices: ["scar-removal", "vitiligo-surgery", "hair-transplant"],
   },
 ];
 
-/* ================================================================ */
-/*  TESTIMONIALS                                                      */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Testimonials                                                       */
+/* ------------------------------------------------------------------ */
 
 export const testimonials: Testimonial[] = [
   {
@@ -920,9 +1107,9 @@ export const testimonials: Testimonial[] = [
   },
 ];
 
-/* ================================================================ */
-/*  BEFORE / AFTER RESULTS                                           */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Before / After Results                                             */
+/* ------------------------------------------------------------------ */
 
 export const results: ResultItem[] = [
   {
@@ -1010,21 +1197,25 @@ export const results: ResultItem[] = [
     id: "result-10",
     beforeImage: clinicImages.resultEarBefore,
     afterImage: clinicImages.resultEarAfter,
-    caption: "Ear Reshaping — Natural ears, excellent symmetry achieved",
+    caption: "Ear Reshaping — Natural, symmetrical ears close to the head",
     serviceSlug: "ear-reshaping",
     serviceTitle: "Ear Reshaping",
     location: "Haldwani, Uttarakhand",
   },
 ];
 
-/* ================================================================ */
-/*  HELPERS                                                         */
-/* ================================================================ */
+/* ------------------------------------------------------------------ */
+/*  Helpers                                                            */
+/* ------------------------------------------------------------------ */
 
-export function getServiceBySlug(slug: string) {
+export function getServiceBySlug(slug: string): Service | undefined {
   return services.find((s) => s.slug === slug);
 }
 
-export function getRelatedServices(slugs: string[]) {
+export function getServicesByCategory(category: ServiceCategory): Service[] {
+  return services.filter((s) => s.category === category);
+}
+
+export function getRelatedServices(slugs: string[]): Service[] {
   return services.filter((s) => slugs.includes(s.slug));
 }

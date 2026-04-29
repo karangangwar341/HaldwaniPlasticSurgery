@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import ResultsGallery from "@/components/ResultsGallery";
-import { results } from "@/lib/sampleData";
+import { getResults } from "@/sanity/queries";
 
 export const metadata: Metadata = {
   title: "Before & After Results | Dr. Sarika Gangwar — Haldwani",
@@ -31,7 +31,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ResultsPage() {
+export default async function ResultsPage() {
+  const results = await getResults();
+
   return (
     <>
       <HeroSection

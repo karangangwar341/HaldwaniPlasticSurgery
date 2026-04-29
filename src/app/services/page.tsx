@@ -3,7 +3,7 @@ import Link from "next/link";
 import ServiceCard from "@/components/ServiceCard";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
-import { services } from "@/lib/sampleData";
+import { getServices } from "@/sanity/queries";
 import { SERVICE_CATEGORIES } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -33,7 +33,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const services = await getServices();
+
   return (
     <>
       <HeroSection
@@ -47,7 +49,7 @@ export default function ServicesPage() {
 
       {SERVICE_CATEGORIES.map((category) => {
         const categoryServices = services.filter(
-          (s) => s.category === category
+          (s: any) => s.category === category
         );
         return (
           <section key={category} className="py-16 md:py-20 even:bg-cream">
@@ -62,7 +64,7 @@ export default function ServicesPage() {
               </div>
 
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {categoryServices.map((s) => (
+                {categoryServices.map((s: any) => (
                   <ServiceCard
                     key={s.slug}
                     title={s.title}

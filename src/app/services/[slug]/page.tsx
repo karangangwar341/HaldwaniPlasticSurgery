@@ -6,22 +6,25 @@ import HeroSection from "@/components/HeroSection";
 import Timeline from "@/components/Timeline";
 import FAQAccordion from "@/components/FAQAccordion";
 import CTASection from "@/components/CTASection";
+import RichText from "@/components/RichText";
 import { FAQPageSchema } from "@/components/SchemaMarkup";
-import { services, getServiceBySlug, getRelatedServices } from "@/lib/sampleData";
-import { WHATSAPP_LINK } from "@/lib/constants";
+import { getServices, getServiceBySlug } from "@/sanity/queries";
 
 interface Props {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return services.map((s) => ({ slug: s.slug }));
+  const services = await getServices();
+  return services.map((s: any) => ({ slug: s.slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const service = await getServiceBySlug(slug);
+  
   if (!service) return {};
+  
   return {
     title: service.seoTitle,
     description: service.seoDescription,
@@ -50,10 +53,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function ServicePage({ params }: Props) {
   const { slug } = await params;
-  const service = getServiceBySlug(slug);
+  const service = await getServiceBySlug(slug);
+  
   if (!service) notFound();
 
-  const related = getRelatedServices(service.relatedServices);
+  const related = service.relatedServices || [];
 
   return (
     <>
@@ -73,9 +77,9 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="font-heading text-2xl font-bold text-primary md:text-3xl">
             What is {service.title}?
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-primary/70 md:text-lg">
-            {service.overview}
-          </p>
+          <div className="mt-6">
+            <RichText value={service.overview} />
+          </div>
         </div>
       </section>
 
@@ -85,9 +89,9 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="font-heading text-2xl font-bold text-primary md:text-3xl">
             Why is {service.title} Needed?
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-primary/70 md:text-lg">
-            {service.whyNeeded}
-          </p>
+          <div className="mt-6">
+            <RichText value={service.whyNeeded} />
+          </div>
         </div>
       </section>
 
@@ -98,7 +102,7 @@ export default async function ServicePage({ params }: Props) {
             Who is Eligible?
           </h2>
           <ul className="mt-6 space-y-3">
-            {service.eligibility.map((item, i) => (
+            {service.eligibility?.map((item: string, i: number) => (
               <li key={i} className="flex items-start gap-3">
                 <svg className="mt-1 h-5 w-5 shrink-0 text-accent" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />
@@ -127,10 +131,10 @@ export default async function ServicePage({ params }: Props) {
             Recovery Timeline
           </h2>
           <Timeline
-            items={service.recoveryTimeline.map((r) => ({
+            items={service.recoveryTimeline?.map((r: any) => ({
               title: r.period,
               description: r.description,
-            }))}
+            })) || []}
             variant="recovery"
           />
         </div>
@@ -142,9 +146,9 @@ export default async function ServicePage({ params }: Props) {
           <h2 className="font-heading text-2xl font-bold text-primary md:text-3xl">
             Expected Results
           </h2>
-          <p className="mt-6 text-base leading-relaxed text-primary/70 md:text-lg">
-            {service.results}
-          </p>
+          <div className="mt-6">
+            <RichText value={service.results} />
+          </div>
           <Link
             href="/results"
             className="mt-6 inline-flex items-center gap-2 text-accent font-semibold hover:underline"
@@ -168,9 +172,9 @@ export default async function ServicePage({ params }: Props) {
               <svg className="mt-1 h-8 w-8 shrink-0 text-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
               </svg>
-              <p className="text-base leading-relaxed text-primary/70 md:text-lg">
-                {service.safetyNotes}
-              </p>
+              <div className="text-base leading-relaxed text-primary/70 md:text-lg">
+                <RichText value={service.safetyNotes} />
+              </div>
             </div>
           </div>
         </div>
@@ -194,7 +198,7 @@ export default async function ServicePage({ params }: Props) {
               Related Procedures You May Be Interested In
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {related.map((r) => (
+              {related.map((r: any) => (
                 <Link
                   key={r.slug}
                   href={`/services/${r.slug}`}

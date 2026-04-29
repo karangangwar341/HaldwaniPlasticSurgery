@@ -7,7 +7,8 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
 import { MedicalBusinessSchema, PhysicianSchema, FAQPageSchema } from "@/components/SchemaMarkup";
 import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK, SERVICE_CATEGORIES } from "@/lib/constants";
-import { doctorInfo, services, testimonials, results } from "@/lib/sampleData";
+import { doctorInfo } from "@/lib/sampleData";
+import { getServices, getTestimonials, getResults } from "@/sanity/queries";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -37,11 +38,6 @@ export const metadata: Metadata = {
   },
 };
 
-/* ---------- Featured Services (one per category) ---------- */
-const featuredServices = SERVICE_CATEGORIES.map(
-  (cat) => services.find((s) => s.category === cat)!
-).filter(Boolean);
-
 /* ---------- Homepage FAQs ---------- */
 const homeFaqs = [
   { question: "Who is the best plastic surgeon in Haldwani?", answer: "Dr. Sarika Gangwar is widely regarded as the best plastic and cosmetic surgeon in Haldwani, Uttarakhand with over 8 years of experience and 1,200+ successful procedures." },
@@ -50,7 +46,17 @@ const homeFaqs = [
   { question: "How do I book a consultation?", answer: "You can book a consultation via WhatsApp, phone call, or by visiting the clinic in Haldwani. WhatsApp is the fastest way to connect." },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const [services, testimonials, results] = await Promise.all([
+    getServices(),
+    getTestimonials(),
+    getResults(),
+  ]);
+
+  const featuredServices = SERVICE_CATEGORIES.map(
+    (cat) => services.find((s: any) => s.category === cat)
+  ).filter(Boolean);
+
   return (
     <>
       <MedicalBusinessSchema />
@@ -379,7 +385,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {results.slice(0, 3).map((r) => (
+            {results.slice(0, 3).map((r: any) => (
               <BeforeAfterSlider
                 key={r.id}
                 beforeImage={r.beforeImage}
@@ -416,7 +422,7 @@ export default function Home() {
           </div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t, i) => (
+            {testimonials.map((t: any, i: number) => (
               <article
                 key={i}
                 className="rounded-2xl bg-white p-8 shadow-lg transition-all hover:shadow-xl"

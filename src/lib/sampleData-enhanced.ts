@@ -92,8 +92,8 @@ export const doctorInfo: DoctorInfo = {
     "Reconstructive Surgery",
   ],
   experience: 8,
-  proceduresDone: 1200,
-  bio: "Dr. Sarika Gangwar is one of the most trusted plastic and cosmetic surgeons in Haldwani, Uttarakhand. With over 8 years of specialized experience and more than 1,200 successful procedures, she combines surgical precision with an artistic eye to deliver natural, life-changing results. Trained at premier medical institutions across India, Dr. Gangwar brings world-class cosmetic surgery expertise to the Kumaun region, making advanced aesthetic procedures accessible without the need to travel to metro cities.",
+  proceduresDone: 3500,
+  bio: "Dr. Sarika Gangwar is one of the most trusted plastic and cosmetic surgeons in Haldwani, Uttarakhand. With over 8 years of specialized experience and more than 3,500 successful procedures, she combines surgical precision with an artistic eye to deliver natural, life-changing results. Trained at premier medical institutions across India, Dr. Gangwar brings world-class cosmetic surgery expertise to the Kumaun region, making advanced aesthetic procedures accessible without the need to travel to metro cities.",
   philosophy:
     "Every patient is unique. My approach begins with truly understanding your goals and concerns, followed by an honest assessment of what can be achieved. I believe in enhancing your natural beauty — not changing who you are. Safety, precision, and natural-looking results are the cornerstones of my practice.",
   image: clinicImages.doctor,
@@ -210,7 +210,7 @@ export const services: Service[] = [
     slug: "rhinoplasty",
     category: "Face",
     shortDescription: "Reshape your nose for better proportion, symmetry, and breathing with expert rhinoplasty surgery.",
-    overview: "Rhinoplasty is one of the most transformative facial procedures. Dr. Sarika Gangwar performs both cosmetic and functional rhinoplasty — reshaping the nose to achieve facial harmony while improving breathing when needed. Using advanced open and closed techniques, she delivers precise, natural results tailored to Indian facial anatomy. With over 8 years of specialized experience and 1200+ procedures, Dr. Gangwar is known for creating beautiful, natural-looking noses.",
+    overview: "Rhinoplasty is one of the most transformative facial procedures. Dr. Sarika Gangwar performs both cosmetic and functional rhinoplasty — reshaping the nose to achieve facial harmony while improving breathing when needed. Using advanced open and closed techniques, she delivers precise, natural results tailored to Indian facial anatomy. With over 8 years of specialized experience and 3500+ procedures, Dr. Gangwar is known for creating beautiful, natural-looking noses.",
     whyNeeded: "The nose is the central feature of the face. A disproportionate, crooked, or bulbous nose can affect facial balance, breathing, and self-confidence significantly. Structural issues like a deviated septum can cause breathing difficulties that affect quality of life. Rhinoplasty addresses both aesthetic concerns and functional problems in a single procedure, often with life-changing results.",
     eligibility: ["Adults with cosmetic concerns about nasal shape, size, or proportion", "Patients with breathing difficulties due to nasal structure", "Nasal growth must be complete (typically age 16+)", "Good overall health without uncontrolled conditions", "Non-smokers for optimal healing"],
     procedureSteps: [
@@ -227,7 +227,7 @@ export const services: Service[] = [
       { period: "Month 3–12", description: "Subtle refinements continue as the nose settles into its final shape. Most major changes visible at 6 weeks, but final perfection takes 12 months." },
     ],
     results: "A balanced, proportionate nose that harmonizes beautifully with your facial features. Improved breathing in functional cases. Results are permanent. Patients report transformation in confidence, breathing comfort, and overall facial aesthetics.",
-    safetyNotes: "Rhinoplasty demands the highest surgical precision and artistic skill. Dr. Gangwar's extensive training from premier institutions and 1200+ procedures ensure safe, predictable outcomes. All procedures performed in fully equipped surgical facility with strict safety protocols.",
+    safetyNotes: "Rhinoplasty demands the highest surgical precision and artistic skill. Dr. Gangwar's extensive training from premier institutions and 3500+ procedures ensure safe, predictable outcomes. All procedures performed in fully equipped surgical facility with strict safety protocols.",
     faqs: [
       { question: "Will my nose look natural?", answer: "Absolutely. Dr. Gangwar specializes in creating natural-looking noses that complement your unique facial features — never the 'plastic surgery' look. Each nose is designed specifically for your face." },
       { question: "Can rhinoplasty fix breathing problems?", answer: "Yes. Functional rhinoplasty corrects structural issues like deviated septum while improving the nose's appearance." },
@@ -235,7 +235,7 @@ export const services: Service[] = [
     ],
     heroImage: "/images/svc-rhinoplasty.jpg",
     seoTitle: "Rhinoplasty (Nose Job) in Haldwani | Dr. Sarika Gangwar",
-    seoDescription: "Best rhinoplasty surgeon in Haldwani. Expert nose reshaping by Dr. Sarika Gangwar. 1200+ procedures. Cosmetic + functional.",
+    seoDescription: "Best rhinoplasty surgeon in Haldwani. Expert nose reshaping by Dr. Sarika Gangwar. 3500+ procedures. Cosmetic + functional.",
     relatedServices: ["face-lift", "chin-correction", "lip-enhancement-reduction"],
   },
   {
@@ -289,7 +289,7 @@ export const services: Service[] = [
       { period: "Week 3–6", description: "Return to full activities including exercise. Final contour emerges beautifully." },
     ],
     results: "A more defined, proportionate chin that enhances your entire facial profile dramatically. Results are permanent. Most patients report dramatically improved confidence and satisfaction with their appearance.",
-    safetyNotes: "Procedure performed with careful nerve monitoring to preserve chin sensation. Dr. Gangwar uses anatomically precise techniques refined through 1200+ procedures. Modern biocompatible implants are used when needed.",
+    safetyNotes: "Procedure performed with careful nerve monitoring to preserve chin sensation. Dr. Gangwar uses anatomically precise techniques refined through 3500+ procedures. Modern biocompatible implants are used when needed.",
     faqs: [
       { question: "Implant or bone surgery — which is better?", answer: "It depends on your anatomy. Sliding genioplasty offers more flexibility for repositioning the entire chin, while implants are simpler and less invasive for augmentation-only cases." },
       { question: "Are chin implants safe?", answer: "Yes. Modern biocompatible implants (silicone or Gore-Tex) are well-tolerated and have excellent long-term safety records spanning decades." },

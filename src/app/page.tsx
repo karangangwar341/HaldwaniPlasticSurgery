@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 
 /* ---------- Homepage FAQs ---------- */
 const homeFaqs = [
-  { question: "Who is the best plastic surgeon in Haldwani?", answer: "Dr. Sarika Gangwar is widely regarded as the best plastic and cosmetic surgeon in Haldwani, Uttarakhand with over 8 years of experience and 1,200+ successful procedures." },
+  { question: "Who is the best plastic surgeon in Haldwani?", answer: "Dr. Sarika Gangwar is widely regarded as the best plastic and cosmetic surgeon in Haldwani, Uttarakhand with over 8 years of experience and 3,500+ successful procedures." },
   { question: "What cosmetic procedures are available in Haldwani?", answer: "Dr. Sarika Gangwar offers a full range of cosmetic procedures in Haldwani including rhinoplasty, liposuction, breast surgery, face lift, hair transplant, and more." },
   { question: "Is cosmetic surgery safe?", answer: "When performed by a qualified, experienced plastic surgeon like Dr. Gangwar in a fully equipped facility, cosmetic surgery is safe with high success rates." },
   { question: "How do I book a consultation?", answer: "You can book a consultation via WhatsApp, phone call, or by visiting the clinic in Haldwani. WhatsApp is the fastest way to connect." },
@@ -66,7 +66,7 @@ export default async function Home() {
       {/* ========== HERO ========== */}
       <HeroSection
         title="Best Plastic Surgeon in Haldwani, Uttarakhand"
-        subtitle="Advanced cosmetic & plastic surgery with natural results. 8+ years of experience, 1,200+ successful procedures. Trusted by patients across the Kumaun region."
+        subtitle="Advanced cosmetic & plastic surgery with natural results. 8+ years of experience, 3,500+ successful procedures. Trusted by patients across the Kumaun region."
         backgroundImage="/images/hero-home.jpg"
         ctaText="View Services"
         ctaLink="/services"
@@ -78,7 +78,7 @@ export default async function Home() {
           <div className="grid grid-cols-2 gap-4 rounded-2xl bg-white p-8 shadow-2xl md:grid-cols-4 md:gap-8">
             {[
               { number: "8+", label: "Years Experience" },
-              { number: "1,200+", label: "Procedures Done" },
+              { number: "3,500+", label: "Procedures Done" },
               { number: "DrNB", label: "Plastic Surgery" },
               { number: "100%", label: "Patient Safety" },
             ].map((stat) => (

@@ -7,8 +7,7 @@ import BeforeAfterSlider from "@/components/BeforeAfterSlider";
 import CTASection from "@/components/CTASection";
 import { MedicalBusinessSchema, PhysicianSchema, FAQPageSchema } from "@/components/SchemaMarkup";
 import { SITE_TITLE, SITE_DESCRIPTION, WHATSAPP_LINK, SERVICE_CATEGORIES } from "@/lib/constants";
-import { doctorInfo } from "@/lib/sampleData";
-import { getServices, getTestimonials, getResults } from "@/sanity/queries";
+import { getServices, getTestimonials, getResults, getDoctorInfo } from "@/sanity/queries";
 
 export const metadata: Metadata = {
   title: SITE_TITLE,
@@ -38,20 +37,20 @@ export const metadata: Metadata = {
   },
 };
 
-/* ---------- Homepage FAQs ---------- */
-const homeFaqs = [
-  { question: "Who is the best plastic surgeon in Haldwani?", answer: "Dr. Sarika Gangwar is widely regarded as the best plastic and cosmetic surgeon in Haldwani, Uttarakhand with over 8 years of experience and 3,500+ successful procedures." },
-  { question: "What cosmetic procedures are available in Haldwani?", answer: "Dr. Sarika Gangwar offers a full range of cosmetic procedures in Haldwani including rhinoplasty, liposuction, breast surgery, face lift, hair transplant, and more." },
-  { question: "Is cosmetic surgery safe?", answer: "When performed by a qualified, experienced plastic surgeon like Dr. Gangwar in a fully equipped facility, cosmetic surgery is safe with high success rates." },
-  { question: "How do I book a consultation?", answer: "You can book a consultation via WhatsApp, phone call, or by visiting the clinic in Haldwani. WhatsApp is the fastest way to connect." },
-];
-
 export default async function Home() {
-  const [services, testimonials, results] = await Promise.all([
+  const [services, testimonials, results, doctorInfo] = await Promise.all([
     getServices(),
     getTestimonials(),
     getResults(),
+    getDoctorInfo(),
   ]);
+
+  const homeFaqs = [
+    { question: "Who is the best plastic surgeon in Haldwani?", answer: `Dr. Sarika Gangwar is widely regarded as the best plastic and cosmetic surgeon in Haldwani, Uttarakhand with over ${doctorInfo.experience} years of experience and ${doctorInfo.proceduresDone.toLocaleString()}+ successful procedures.` },
+    { question: "What cosmetic procedures are available in Haldwani?", answer: "Dr. Sarika Gangwar offers a full range of cosmetic procedures in Haldwani including rhinoplasty, liposuction, breast surgery, face lift, hair transplant, and more." },
+    { question: "Is cosmetic surgery safe?", answer: "When performed by a qualified, experienced plastic surgeon like Dr. Gangwar in a fully equipped facility, cosmetic surgery is safe with high success rates." },
+    { question: "How do I book a consultation?", answer: "You can book a consultation via WhatsApp, phone call, or by visiting the clinic in Haldwani. WhatsApp is the fastest way to connect." },
+  ];
 
   const featuredServices = SERVICE_CATEGORIES.map(
     (cat) => services.find((s: any) => s.category === cat)
@@ -60,13 +59,13 @@ export default async function Home() {
   return (
     <>
       <MedicalBusinessSchema />
-      <PhysicianSchema />
+      <PhysicianSchema doctorInfo={doctorInfo} />
       <FAQPageSchema faqs={homeFaqs} />
 
       {/* ========== HERO ========== */}
       <HeroSection
         title="Best Plastic Surgeon in Haldwani, Uttarakhand"
-        subtitle="Advanced cosmetic & plastic surgery with natural results. 8+ years of experience, 3,500+ successful procedures. Trusted by patients across the Kumaun region."
+        subtitle={`Advanced cosmetic & plastic surgery with natural results. ${doctorInfo.experience}+ years of experience, ${doctorInfo.proceduresDone.toLocaleString()}+ successful procedures. Trusted by patients across the Kumaun region.`}
         backgroundImage="/images/hero-home.jpg"
         ctaText="View Services"
         ctaLink="/services"
@@ -77,8 +76,8 @@ export default async function Home() {
         <div className="mx-auto max-w-5xl px-6 lg:px-8">
           <div className="grid grid-cols-2 gap-4 rounded-2xl bg-white p-8 shadow-2xl md:grid-cols-4 md:gap-8">
             {[
-              { number: "8+", label: "Years Experience" },
-              { number: "3,500+", label: "Procedures Done" },
+              { number: `${doctorInfo.experience}+`, label: "Years Experience" },
+              { number: `${doctorInfo.proceduresDone.toLocaleString()}+`, label: "Procedures Done" },
               { number: "DrNB", label: "Plastic Surgery" },
               { number: "100%", label: "Patient Safety" },
             ].map((stat) => (
@@ -337,7 +336,7 @@ export default async function Home() {
               </p>
 
               <div className="mt-6 flex flex-wrap gap-2">
-                {doctorInfo.qualifications.map((q) => (
+                {doctorInfo.qualifications.map((q: string) => (
                   <span
                     key={q}
                     className="rounded-full bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent-dark"

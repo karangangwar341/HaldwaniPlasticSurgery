@@ -4,40 +4,45 @@ import Link from "next/link";
 import HeroSection from "@/components/HeroSection";
 import CTASection from "@/components/CTASection";
 import { PhysicianSchema } from "@/components/SchemaMarkup";
-import { doctorInfo } from "@/lib/sampleData";
+import { getDoctorInfo } from "@/sanity/queries";
 import { WHATSAPP_LINK } from "@/lib/constants";
 
-export const metadata: Metadata = {
-  title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
-  description:
-    "Learn about Dr. Sarika Gangwar — leading plastic and cosmetic surgeon in Haldwani, Uttarakhand. 8+ years experience, DrNB Plastic Surgery, 1,200+ procedures.",
-  alternates: { canonical: "/about" },
-  keywords: [
-    "Dr Sarika Gangwar",
-    "about Dr Sarika Gangwar",
-    "plastic surgeon haldwani",
-    "DrNB plastic surgery",
-    "best cosmetic surgeon uttarakhand",
-    "plastic surgeon kumaun",
-  ],
-  openGraph: {
+export async function generateMetadata(): Promise<Metadata> {
+  const doctorInfo = await getDoctorInfo();
+  
+  return {
     title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
-    description: "Learn about Dr. Sarika Gangwar — 8+ years experience, DrNB Plastic Surgery, 1,200+ procedures in Haldwani, Uttarakhand.",
-    type: "profile",
-    images: [{ url: "/images/doctor.jpg", width: 800, height: 1067, alt: "Dr. Sarika Gangwar — Plastic Surgeon Haldwani" }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
-    description: "8+ years experience, DrNB Plastic Surgery, 1,200+ procedures in Haldwani, Uttarakhand.",
-    images: ["/images/doctor.jpg"],
-  },
-};
+    description: `Learn about Dr. Sarika Gangwar — leading plastic and cosmetic surgeon in Haldwani, Uttarakhand. ${doctorInfo.experience}+ years experience, DrNB Plastic Surgery, ${doctorInfo.proceduresDone.toLocaleString()}+ procedures.`,
+    alternates: { canonical: "/about" },
+    keywords: [
+      "Dr Sarika Gangwar",
+      "about Dr Sarika Gangwar",
+      "plastic surgeon haldwani",
+      "DrNB plastic surgery",
+      "best cosmetic surgeon uttarakhand",
+      "plastic surgeon kumaun",
+    ],
+    openGraph: {
+      title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani, Uttarakhand",
+      description: `Learn about Dr. Sarika Gangwar — ${doctorInfo.experience}+ years experience, DrNB Plastic Surgery, ${doctorInfo.proceduresDone.toLocaleString()}+ procedures in Haldwani, Uttarakhand.`,
+      type: "profile",
+      images: [{ url: "/images/doctor.jpg", width: 800, height: 1067, alt: "Dr. Sarika Gangwar — Plastic Surgeon Haldwani" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: "About Dr. Sarika Gangwar | Best Plastic Surgeon in Haldwani",
+      description: `${doctorInfo.experience}+ years experience, DrNB Plastic Surgery, ${doctorInfo.proceduresDone.toLocaleString()}+ procedures in Haldwani, Uttarakhand.`,
+      images: ["/images/doctor.jpg"],
+    },
+  };
+}
 
-export default function AboutPage() {
+export default async function AboutPage() {
+  const doctorInfo = await getDoctorInfo();
+
   return (
     <>
-      <PhysicianSchema />
+      <PhysicianSchema doctorInfo={doctorInfo} />
 
       <HeroSection
         title="About Dr. Sarika Gangwar"
@@ -99,7 +104,7 @@ export default function AboutPage() {
                   Qualifications & Credentials
                 </h3>
                 <div className="mt-4 flex flex-wrap gap-3">
-                  {doctorInfo.qualifications.map((q) => (
+                  {doctorInfo.qualifications.map((q: string) => (
                     <span
                       key={q}
                       className="rounded-full bg-primary/5 border border-primary/10 px-5 py-2 text-sm font-medium text-primary"
@@ -116,7 +121,7 @@ export default function AboutPage() {
                   Areas of Specialization
                 </h3>
                 <ul className="mt-4 space-y-3">
-                  {doctorInfo.specializations.map((spec) => (
+                  {doctorInfo.specializations.map((spec: string) => (
                     <li key={spec} className="flex items-center gap-3">
                       <svg className="h-5 w-5 shrink-0 text-accent" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" />

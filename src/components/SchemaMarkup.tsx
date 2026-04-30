@@ -1,5 +1,4 @@
 import { SITE_URL, CLINIC_NAME, CLINIC_CITY, CLINIC_STATE, CLINIC_PINCODE, PHONE_NUMBER, EMAIL, CLINIC_LOCATIONS } from "@/lib/constants";
-import { doctorInfo } from "@/lib/sampleData";
 
 /* ------------------------------------------------------------------ */
 /*  MedicalBusiness + Physician Schema                                */
@@ -54,7 +53,7 @@ export function MedicalBusinessSchema() {
   );
 }
 
-export function PhysicianSchema() {
+export function PhysicianSchema({ doctorInfo }: { doctorInfo: any }) {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Physician",
@@ -69,10 +68,10 @@ export function PhysicianSchema() {
       addressRegion: CLINIC_STATE,
       addressCountry: "IN",
     },
-    alumniOf: doctorInfo.qualifications.map((q) => ({
+    alumniOf: doctorInfo.qualifications?.map((q: string) => ({
       "@type": "EducationalOrganization",
       name: q,
-    })),
+    })) || [],
   };
 
   return (

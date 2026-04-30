@@ -54,6 +54,18 @@ export const resultsQuery = groq`*[_type == "result"] | order(_createdAt desc) {
   "location": locationTag
 }`;
 
+export const doctorQuery = groq`*[_type == "doctor"][0] {
+  name,
+  title,
+  qualifications,
+  specializations,
+  experience,
+  proceduresDone,
+  bio,
+  philosophy,
+  "image": image.asset->url
+}`;
+
 export async function getServices() {
   return client.fetch(servicesQuery, {}, { next: { revalidate: 60 } });
 }
@@ -68,4 +80,8 @@ export async function getTestimonials() {
 
 export async function getResults() {
   return client.fetch(resultsQuery, {}, { next: { revalidate: 60 } });
+}
+
+export async function getDoctorInfo() {
+  return client.fetch(doctorQuery, {}, { next: { revalidate: 60 } });
 }

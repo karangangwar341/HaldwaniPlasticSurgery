@@ -40,6 +40,7 @@ import {
   services,
   testimonials,
   results,
+  doctorInfo,
 } from "../src/lib/sampleData";
 
 // ── Sanity client ─────────────────────────────────────────────────────────────
@@ -111,6 +112,36 @@ async function uploadImage(imagePath: string) {
     console.error(`  ❌ Error uploading ${fullPath}:`, err.message);
     return null;
   }
+}
+
+// ── Import Doctor Info ────────────────────────────────────────────────────────
+async function importDoctor() {
+  console.log(`\n👨‍⚕️ Importing Doctor Profile...`);
+  
+  const imageAssetId = await uploadImage(doctorInfo.image);
+
+  const doc = {
+    _type: "doctor",
+    _id: "doctor-profile",
+    name: doctorInfo.name,
+    title: doctorInfo.title,
+    qualifications: doctorInfo.qualifications,
+    specializations: doctorInfo.specializations,
+    experience: doctorInfo.experience,
+    proceduresDone: doctorInfo.proceduresDone,
+    bio: doctorInfo.bio,
+    philosophy: doctorInfo.philosophy,
+    image: imageAssetId ? {
+      _type: "image",
+      asset: {
+        _type: "reference",
+        _ref: imageAssetId,
+      },
+    } : undefined,
+  };
+
+  await client.createOrReplace(doc);
+  console.log(`  ✓  Doctor Profile imported`);
 }
 
 // ── Import Services ───────────────────────────────────────────────────────────
@@ -259,6 +290,7 @@ async function main() {
   console.log(`   Project: ${projectId}`);
   console.log(`   Dataset: ${dataset}\n`);
 
+  await importDoctor();
   await importServices();
   await wireRelatedServices();
   await importTestimonials();

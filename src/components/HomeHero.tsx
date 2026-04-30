@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { WHATSAPP_LINK } from "@/lib/constants";
-import { doctorInfo } from "@/lib/sampleData";
 
-export default function HomeHero() {
+export default function HomeHero({ doctorInfo }: { doctorInfo: any }) {
   return (
     <section className="relative min-h-screen overflow-hidden bg-primary-dark">
       {/* Ambient background glows */}
@@ -53,8 +52,8 @@ export default function HomeHero() {
           {/* Trust chips */}
           <div className="mt-8 flex flex-wrap gap-2.5">
             {[
-              "1,200+ Successful Procedures",
-              "8+ Years Experience",
+              `${doctorInfo.proceduresDone.toLocaleString()}+ Successful Procedures`,
+              `${doctorInfo.experience}+ Years Experience`,
               "Chandan Hospital",
               "Natural-Looking Results",
             ].map((badge) => (
@@ -112,8 +111,8 @@ export default function HomeHero() {
           {/* Stats row */}
           <div className="mt-14 grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
             {[
-              { number: "8+", label: "Years of Excellence" },
-              { number: "1,200+", label: "Happy Patients" },
+              { number: `${doctorInfo.experience}+`, label: "Years of Excellence" },
+              { number: `${doctorInfo.proceduresDone.toLocaleString()}+`, label: "Happy Patients" },
               { number: "100%", label: "Safety Record" },
             ].map((stat) => (
               <div key={stat.label}>
@@ -181,7 +180,7 @@ export default function HomeHero() {
                 </svg>
               </div>
               <div>
-                <p className="text-xs font-bold text-primary">1,200+ Patients</p>
+                <p className="text-xs font-bold text-primary">{doctorInfo.proceduresDone.toLocaleString()}+ Patients</p>
                 <p className="text-[11px] text-primary/50">Across Uttarakhand</p>
               </div>
             </div>

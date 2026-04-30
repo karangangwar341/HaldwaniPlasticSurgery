@@ -41,6 +41,10 @@ export default defineConfig({
               .title("Before / After Results")
               .schemaType("result")
               .child(S.documentTypeList("result").title("Results")),
+            S.listItem()
+              .title("Media & Press")
+              .schemaType("mediaFeature")
+              .child(S.documentTypeList("mediaFeature").title("Media Features")),
           ]),
     }),
     visionTool({ defaultApiVersion: "2024-01-01" }),

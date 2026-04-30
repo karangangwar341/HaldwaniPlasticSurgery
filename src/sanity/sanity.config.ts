@@ -21,6 +21,15 @@ export default defineConfig({
           .title("Content")
           .items([
             S.listItem()
+              .title("Doctor Profile")
+              .child(
+                S.document()
+                  .schemaType("doctor")
+                  .documentId("doctor-profile")
+                  .title("Doctor Profile")
+              ),
+            S.divider(),
+            S.listItem()
               .title("Services")
               .schemaType("service")
               .child(S.documentTypeList("service").title("Services")),
